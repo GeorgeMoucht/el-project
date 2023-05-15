@@ -65,9 +65,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## Connect to mySQL Database
 
-When you edit the .env file it is good practice before run the 'php artisan migrate' command, to do the following commands:
+## Connect database
 
-    'php artisan config:cache'
-    'php artisan config:clear'
+When you edit the .env file it is good practice before run the 'php artisan migrate' command, to do the following commands: 
+1. 'php artisan config:cache'
+2. 'php artisan config:clear'
