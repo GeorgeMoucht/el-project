@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.2.3",
-        "sass": "^1.62.1"
+        "sass": "^1.62.1",
+        "vite-plugin-laravel": "^0.3.1"
     }
 }
