@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Providers;
+use Livewire\Livewire;
 
 use Illuminate\Support\ServiceProvider;
 
