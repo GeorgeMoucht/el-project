@@ -1,0 +1,54 @@
+/* 
+ ** Background image on homepage stop overflow
+ ** on slow-scale @keyframes 
+*/
+.content-wrapper
+{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.homepage-background
+{
+    background-image: url('../img/homepage-background.jpg');
+    height: calc(100vh - 83.8833px); /* 83.8833 is the height of the navbar */
+    background-size: cover;
+    background-position: center;
+    animation: slow-scale 50s infinite alternate;
+    position: relative;
+}
+
+.homepage-background .filter
+{
+    width: 100%;
+    height: calc(100vh - 83.8833px); /* 83.8833 is the height of the navbar */
+    background-color: black;
+    z-index: 10;
+    opacity: .5;
+}
+
+.text-wrapper
+{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-25%, -40%);
+    width: 100%;
+    background: red;
+}
+
+.text-wrapper p
+{
+    color: white;
+}
+
+/*
+ ** Make a slow scaling animation to be used in homepage
+*/
+@keyframes slow-scale {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
