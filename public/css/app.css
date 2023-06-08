@@ -1,0 +1,155 @@
+/*---------------------------------------------------------*\
+List:
+    1. Global
+    2. Homepage
+    3. Keyframes
+
+\*---------------------------------------------------------*/
+
+
+/*---------------------------------------------------------*\
+GLOBAL RULES
+\*---------------------------------------------------------*/
+
+/*
+ ** Default class to hide components.
+*/
+.hidden
+{
+    display: none;
+}
+
+.white-btn , .white-btn a
+{
+    border-color: white !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.white-btn:hover
+{
+    color: black !important;
+    /* border-color: black !important; */
+    background-color: white !important;
+}
+
+.white-btn:hover a
+{
+    color: black !important;
+}
+
+
+.p-container
+{
+    position: absolute;
+    width: 60%;
+}
+
+.p-container p
+{
+    text-align: left;
+}
+
+/*---------------------------------------------------------*\
+END OF GLOBAL RULES
+\*---------------------------------------------------------*/
+
+
+
+
+/*---------------------------------------------------------*\
+HOMEPAGE RULES
+\*---------------------------------------------------------*/
+
+/* 
+ ** Background image on homepage stop overflow
+ ** on slow-scale @keyframes 
+*/
+.content-wrapper
+{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/*
+ ** Indicates the homepage background,
+ ** and center it in the center of the screen.
+*/
+.homepage-background
+{
+    background-image: url('../img/homepage-background.jpg');
+    height: calc(100vh - 83.8833px); /* 83.8833 is the height of the navbar */
+    background-size: cover;
+    background-position: center;
+    animation: slow-scale 50s infinite alternate;
+    position: relative;
+}
+
+/*
+ ** Add grey filter in the homepage background.
+*/
+.homepage-background .filter
+{
+    width: 100%;
+    height: calc(100vh - 83.8833px); /* 83.8833 is the height of the navbar */
+    background-color: black;
+    z-index: 10;
+    opacity: .5;
+}
+
+/*
+ ** Positioning the header and paragraphs of homepage.
+*/
+.text-wrapper
+{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    transform: translate(-25%, -40%);
+    width: 100%;
+}
+
+
+/*
+ ** Overwrite Animation.css library
+ **
+ ** Handle the animation on heading title
+*/
+#heading-animation
+{
+    animation-delay: .2s;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+#homepageParAnimation
+{
+    animation-delay: 4s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+/*---------------------------------------------------------*\
+END OF HOMEPAGE RULES
+\*---------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------*\
+KEYFRAMES RULES
+\*---------------------------------------------------------*/
+
+
+/*
+ ** Make a slow scaling animation to be used in homepage background
+*/
+@keyframes slow-scale {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+/*---------------------------------------------------------*\
+END OF KEYFRAMES RULES
+\*---------------------------------------------------------*/
