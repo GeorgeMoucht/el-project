@@ -76,6 +76,14 @@ HOMEPAGE RULES
  ** Indicates the homepage background,
  ** and center it in the center of the screen.
 */
+
+
+
+.homepage-paragraph , .homepage-heading
+{
+    color: white;
+}
+
 .homepage-background
 {
     background-image: url('../img/homepage-background.jpg');
