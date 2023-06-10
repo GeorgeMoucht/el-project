@@ -3,6 +3,7 @@ List:
     1. Global
     2. Homepage
     3. Keyframes
+    4. Footer
 
 \*---------------------------------------------------------*/
 
@@ -160,4 +161,37 @@ KEYFRAMES RULES
 
 /*---------------------------------------------------------*\
 END OF KEYFRAMES RULES
+\*---------------------------------------------------------*/
+
+
+/*---------------------------------------------------------*\
+FOOTER RULES
+\*---------------------------------------------------------*/
+.foot-soc-section
+{
+    background-color: #8f8f8f
+}
+
+.social-hover-fa , .social-hover-web , .social-hover-yt
+{
+    border: none !important;
+}
+
+.social-hover-fa:hover
+{
+    background-color: #2f4679 !important;
+}
+
+.social-hover-web:hover
+{
+    background-color: #320f33 !important;
+}
+
+.social-hover-yt:hover
+{
+    background-color: #d12a2a !important;
+}
+
+/*---------------------------------------------------------*\
+END OF FOOTER RULES
 \*---------------------------------------------------------*/

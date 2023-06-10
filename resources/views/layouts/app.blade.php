@@ -18,6 +18,10 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+    <script src="https://use.fontawesome.com/2897336d5a.js"></script>
+
 </head>
 <body>
     <div id="app">
@@ -82,41 +86,29 @@
         </main>
 
         <!-- Footer -->
-        <footer
-                class="text-center text-lg-start text-white"
-                style="background-color: #1c2331"
-                >
+        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
             <!-- Section: Social media -->
-            <section
-                    class="d-flex justify-content-between p-4"
-                    style="background-color: #6351ce"
-                    >
+            <section class="foot-soc-section d-flex justify-content-between p-4" style="">
                 <!-- Left -->
                 <div class="me-5">
-                <span>Get connected with us on social networks:</span>
+                    <span>Βρείτε μας στα social: </span>
                 </div>
                 <!-- Left -->
 
                 <!-- Right -->
                 <div>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-github"></i>
-                </a>
+                    <!-- Website Λύκειο Ελληνίδων -->
+                    <a class="btn btn-primary me-2 social-hover-web" style="background-color: #481449; width: 50px;" href="https://www.les.gr" target="__blank" role="button">
+                        <img width="20" src="img/svg/circle-info-solid.svg" alt="website-icon">
+                    </a>
+                    <!-- Facebook -->
+                    <a class="btn btn-primary me-2 social-hover-fa" style="background-color: #3b5998; width: 40px;" href="https://www.facebook.com/profile.php?id=100064362262265&ref=bookmarks" target="__blank" role="button">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <!-- Youtube -->
+                    <a class="btn btn-primary me-2 social-hover-yt" style="background-color: #ed302f;" href="https://www.youtube.com/channel/UCMug6a0jl82caMqx3BsXi-Q" target="__blank" role="button">
+                        <img width="20" src="img/svg/youtube.svg" alt="youtube-logo">
+                    </a>
                 </div>
                 <!-- Right -->
             </section>
@@ -189,15 +181,23 @@
                         <!-- Grid column -->
                         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                             <!-- Links -->
-                            <h6 class="text-uppercase fw-bold">Contact</h6>
-                            <hr
-                                class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px"
-                                />
-                            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-                            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                            <h6 class="text-uppercase fw-bold">Επικοινωνία</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                            <!-- Address -->
+                            <div class="container d-inline-flex" style="padding: 0px;">
+                                <img src="img/svg/house-door-fill.svg" width="20" alt="house-icon">
+                                <div style="padding-left: .5rem;">Konstantinoupoleos 33, Sérres</div>                   
+                            </div>
+                            <!-- Email -->
+                            <div class="container d-inline-flex" style="padding: 0px;">
+                                <img src="img/svg/envelope-fill.svg" width="20" alt="email-icon">
+                                <div style="padding-left: .5rem;">les@les.gr</div>                   
+                            </div>
+                            <!-- Phone -->
+                            <div class="container d-inline-flex" style="padding: 0px;">
+                                <img src="img/svg/telephone-fill.svg" width="20" alt="phone-icon">
+                                <div style="padding-left: .5rem;">2321 023390</div>                   
+                            </div>
                         </div>
                         <!-- Grid column -->
                     </div>
