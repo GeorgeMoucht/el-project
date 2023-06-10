@@ -37,8 +37,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                        <!-- Homepage -->
                         <li class="nav-item">
                             <a href="{{ route('home') }}" class="nav-link">Αρχική</a>
+                        </li>
+
+                        <!-- Bio Dropdown -->
+                        <li class="nav-item dropdown dropdown-hover">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                                Βιογραφίες
+                            </a>
+                            <!-- DropDown List -->
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Βασίλειος Βεηλικτσίδης</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Ελπίδα Βεηλικτσίδη</a></li>
+                            </ul>
                         </li>
                     </ul>
 
