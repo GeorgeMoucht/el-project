@@ -51,6 +51,14 @@ GLOBAL RULES
     text-align: left;
 }
 
+
+.dropdown-hover:hover .dropdown-menu
+{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
 /*---------------------------------------------------------*\
 END OF GLOBAL RULES
 \*---------------------------------------------------------*/
