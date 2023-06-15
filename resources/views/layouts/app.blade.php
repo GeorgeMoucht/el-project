@@ -136,12 +136,13 @@
                         <!-- Grid column -->
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <!-- Content -->
-                            <h6 class="text-uppercase fw-bold">Company name</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
-                            <p>
-                                Here you can use rows and columns to organize your footer
-                                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit.
+                            <!-- <h6 class="text-uppercase fw-bold">Company name</h6> -->
+                            <a class="navbar-brand" href="{{ url('/') }}">
+                                <img src="{{ asset('img/logo-les-grayscale.png') }}" alt="Logo" width="120">
+                            </a>
+                            <!-- <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/> -->
+                            <p style="font-size: 12px;">
+                                Το Λύκειον των Ελληνίδων Σερρών κληρονόμος του σπάνιου, σημαντικοτάτου και μεγάλου Μουσικού Αρχείου της οικογένειας Βεηλικτσίδη, ενός πραγματικού θησαυρού για την πόλη των Σερρών, αισθάνεται μεγάλη την τιμή και το χρέος προς διαφύλαξη του γιατί είναι η μεγαλύτερη παρακαταθήκη για τις επόμενες γενιές. 
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -222,8 +223,8 @@
 
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                © 2020 Copyright:
-                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                © 2023 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">GeorgeMoucht</a>
             </div>
             <!-- Copyright -->
         </footer>
