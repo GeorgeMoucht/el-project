@@ -105,7 +105,7 @@
             <section class="foot-soc-section d-flex justify-content-between p-4" style="">
                 <!-- Left -->
                 <div class="me-5">
-                    <span>Βρείτε μας στα social: </span>
+                    <span style="font-size: 18px;">Βρείτε μας στα social: </span>
                 </div>
                 <!-- Left -->
 
@@ -137,13 +137,12 @@
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <!-- Content -->
                             <!-- <h6 class="text-uppercase fw-bold">Company name</h6> -->
-                            <a class="navbar-brand" href="{{ url('/') }}">
+                            <a class="navbar-brand footer-logo" href="{{ url('/') }}" style="display: flex; justify-content: center; align-items: center;">
                                 <img src="{{ asset('img/logo-les-grayscale.png') }}" alt="Logo" width="120">
                             </a>
                             <!-- <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/> -->
                             <p style="font-size: 12px;">
-                                Το Λύκειον των Ελληνίδων Σερρών κληρονόμος του σπάνιου, σημαντικοτάτου και μεγάλου Μουσικού Αρχείου της οικογένειας Βεηλικτσίδη, ενός πραγματικού θησαυρού για την πόλη των Σερρών, αισθάνεται μεγάλη την τιμή και το χρέος προς διαφύλαξη του γιατί είναι η μεγαλύτερη παρακαταθήκη για τις επόμενες γενιές. 
-                            </p>
+                                Το Λύκειο των Ελληνίδων Σερρών, είναι μέλος της μεγάλης οικογένειας του Λυκείου των Ελληνίδων που ιδρύθηκε στην Αθήνα το 1911 απο την μεγάλη δασκάλα και δημοσιογράφο, Καλλιρρόη Σιγανού Παρρέν, πρωτοπόρου του γυναικείου κινήματος και εκδότρια απο το 1887 της εφημερίδας των κυριών.                            </p>
                         </div>
                         <!-- Grid column -->
 

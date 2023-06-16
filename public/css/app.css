@@ -200,6 +200,13 @@ FOOTER RULES
     background-color: #d12a2a !important;
 }
 
+.footer-logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
+}
 /*---------------------------------------------------------*\
 END OF FOOTER RULES
 \*---------------------------------------------------------*/
