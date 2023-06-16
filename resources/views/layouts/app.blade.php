@@ -51,7 +51,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Βασίλειος Βεηλικτσίδης</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Ελπίδα Βεηλικτσίδη</a></li>
+                                <li><a class="dropdown-item" href="{{ route('elpida-bio') }}">Ελπίδα Βεηλικτσίδη</a></li>
                             </ul>
                         </li>
                     </ul>
