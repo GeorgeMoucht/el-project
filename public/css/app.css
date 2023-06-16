@@ -4,6 +4,7 @@ List:
     2. Homepage
     3. Keyframes
     4. Footer
+    5. Elpida-bio
 
 \*---------------------------------------------------------*/
 
@@ -209,4 +210,55 @@ FOOTER RULES
 }
 /*---------------------------------------------------------*\
 END OF FOOTER RULES
+\*---------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------*\
+Elpidas bio RULES
+\*---------------------------------------------------------*/
+.header-image
+{
+    background-image: url('../img/photos_elpida/4.jpg');
+    width: 100%;
+    height: 40vh;
+    background-position: center;
+}
+
+.header-image .filter
+{
+    width: 100%;
+    height: 40vh; /* 83.8833 is the height of the navbar */
+    background-color: black;
+    z-index: 10;
+    position: absolute;
+    opacity: .3;
+}
+
+.header-cnt
+{
+    margin-bottom: 3rem;
+}
+
+.header
+{
+    position: absolute;
+    top: 30%;
+    left: 23%;
+    z-index: 10;
+    transform: translate(50%, -50%);
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.header h1
+{
+    color: white;
+    font-size: 45px;
+    text-decoration: bold;
+    border-bottom: 2px solid white;
+}
+
+/*---------------------------------------------------------*\
+END OF Elpidas bio RULES
 \*---------------------------------------------------------*/
