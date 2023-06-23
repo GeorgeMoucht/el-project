@@ -83,4 +83,73 @@
     Χορωδία του Λ.Ε.Σ. όπως φαίνεται και στην πρώτη πρόσκληση της 1ης κοινωνικής εκδήλωσης του Λ.Ε.Σ.
     </p>
 </div>
+
+
+
+<!-- Image Carousel -->
+<div class="container" style="margin-bottom: 3rem;">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-8">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <!-- Indicators -->
+                <ol class="carousel-indicators carousel-indicators--thumbnails">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+                        <img src="{{ asset('img/photos_elpida/1.jpg') }}" class="thumbnail-img" alt="Thumbnail 1">
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1">
+                        <img src="{{ asset('img/photos_elpida/2.jpg') }}" class="thumbnail-img" alt="Thumbnail 2">
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2">
+                        <img src="{{ asset('img/photos_elpida/3.jpg') }}" class="thumbnail-img" alt="Thumbnail 3">
+                    </li>
+                    <!-- Add more thumbnails as needed -->
+                </ol>
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('img/photos_elpida/1.jpg') }}" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/photos_elpida/2.jpg') }}" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/photos_elpida/3.jpg') }}" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    <!-- Add more slides as needed -->
+                </div>
+
+                <!-- Controls -->
+                <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#carousel-example-generic').carousel();
+    });
+</script>
+
+
+<!-- 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> -->
+
+
+
 @endsection

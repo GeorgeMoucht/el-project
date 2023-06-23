@@ -5,6 +5,7 @@ List:
     3. Keyframes
     4. Footer
     5. Elpida-bio
+    6. Carousel rules
 
 \*---------------------------------------------------------*/
 
@@ -262,3 +263,57 @@ Elpidas bio RULES
 /*---------------------------------------------------------*\
 END OF Elpidas bio RULES
 \*---------------------------------------------------------*/
+
+
+/*---------------------------------------------------------*\
+Carousel RULES
+\*---------------------------------------------------------*/
+
+/* .carousel-cnt
+{
+    background-color: red;
+    position: relative;
+}
+
+.crsl-element img
+{
+    width: 800px;
+}
+
+.carousel-indicator-cnt
+{
+    width: 800px;
+    background-color: orange;
+    height: 100px;
+    z-index: 3;
+    overflow: hidden;
+}
+
+
+.indicator-element img
+{
+    width: 150px;
+    height: 100%;
+} */
+
+
+
+
+
+
+
+
+.carousel-indicators--thumbnails .thumbnail-img {
+    width: 50px;  /* Adjust the width as needed */
+    height: auto; /* Preserve aspect ratio */
+    cursor: pointer;
+    opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+.carousel-indicators--thumbnails .thumbnail-img:hover {
+    opacity: 1; /* Adjust the opacity for hover state */
+}
+
+.carousel-indicators--thumbnails .active .thumbnail-img {
+    opacity: 1; /* Adjust the opacity for active indicator */
+}
