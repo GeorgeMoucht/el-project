@@ -78,78 +78,115 @@
     </p>
 
     <p class="lead">
-    Στην πραγματικότητα όμως η αείμνηστη δασκάλα, η οποία υπήρξε και ιδρυτικό μέλος του Λυκείου των Ελληνίδων Σερρών
-    (Λ.Ε.Σ.) και συμμετείχε στα πρώτα Δ.Σ. από αγάπη προς το Λύκειο ονομάζει την χορωδία του Γυμνασίου Θηλέων Σερρών,
-    Χορωδία του Λ.Ε.Σ. όπως φαίνεται και στην πρώτη πρόσκληση της 1ης κοινωνικής εκδήλωσης του Λ.Ε.Σ.
+      Στην πραγματικότητα όμως η αείμνηστη δασκάλα, η οποία υπήρξε και ιδρυτικό μέλος του Λυκείου των Ελληνίδων Σερρών
+      (Λ.Ε.Σ.) και συμμετείχε στα πρώτα Δ.Σ. από αγάπη προς το Λύκειο ονομάζει την χορωδία του Γυμνασίου Θηλέων Σερρών,
+      Χορωδία του Λ.Ε.Σ. όπως φαίνεται και στην πρώτη πρόσκληση της 1ης κοινωνικής εκδήλωσης του Λ.Ε.Σ.
     </p>
-</div>
 
+    <h2 class="row justify-content-md-center">Συλλογή</h2>
 
-
-<!-- Image Carousel -->
-<div class="container" style="margin-bottom: 3rem;">
-    <div class="row justify-content-center">
-        <div class="col-xs-12 col-md-8">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
-                <!-- Indicators -->
-                <ol class="carousel-indicators carousel-indicators--thumbnails">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
-                        <img src="{{ asset('img/photos_elpida/1.jpg') }}" class="thumbnail-img" alt="Thumbnail 1">
-                    </li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1">
-                        <img src="{{ asset('img/photos_elpida/2.jpg') }}" class="thumbnail-img" alt="Thumbnail 2">
-                    </li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2">
-                        <img src="{{ asset('img/photos_elpida/3.jpg') }}" class="thumbnail-img" alt="Thumbnail 3">
-                    </li>
-                    <!-- Add more thumbnails as needed -->
-                </ol>
-
-                <!-- Slides -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{{ asset('img/photos_elpida/1.jpg') }}" class="d-block w-100" alt="Slide 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('img/photos_elpida/2.jpg') }}" class="d-block w-100" alt="Slide 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('img/photos_elpida/3.jpg') }}" class="d-block w-100" alt="Slide 3">
-                    </div>
-                    <!-- Add more slides as needed -->
-                </div>
-
-                <!-- Controls -->
-                <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+    <div class="container" style="margin-top: 2rem; margin-bottom: 2rem;">
+      <div class="row justify-content-md-center">
+        <div class="col gallery-item" id="elp-gall-1">
+          <img src="{{  asset('img/photos_elpida/1.jpg')  }}" alt="" onclick="openModal(); currentSlide(1)">
         </div>
-    </div>
+        <div class="col gallery-item" id="elp-gall-2">
+          <img src="{{  asset('img/photos_elpida/2.jpg')  }}" alt="" onclick="openModal(); currentSlide(2)">
+        </div>
+        <div class="col gallery-item" id="elp-gall-3">
+          <img src="{{  asset('img/photos_elpida/3.jpg')  }}" alt="" onclick="openModal(); currentSlide(3)">
+        </div>
+
+
+
+   
+      </div>
+
+      <div class="row justify-content-md-center">
+
+        <div class="col gallery-item" id="elp-gall-4">
+            <img src="{{  asset('img/photos_elpida/6.jpg')  }}" alt="" onclick="openModal(); currentSlide(6)">
+        </div>
+        <div class="col gallery-item" id="elp-gall-5">
+          <img src="{{  asset('img/photos_elpida/5.jpg')  }}" alt="" onclick="openModal(); currentSlide(5)">
+        </div>
+        <div class="col gallery-item" id="elp-gall-6">
+          <img src="{{  asset('img/photos_elpida/4.jpg')  }}" alt="" onclick="openModal(); currentSlide(4)">
+        </div>
+
+      </div>
+    </div>    
 </div>
 
-<!-- JavaScript -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
 
-<script>
-    $(document).ready(function () {
-        $('#carousel-example-generic').carousel();
-    });
-</script>
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="{{  asset('img/photos_elpida/1.jpg')  }}" style="width:100%">
+    </div>
 
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="{{  asset('img/photos_elpida/2.jpg')  }}" style="width:100%">
+    </div>
 
-<!-- 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> -->
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="{{  asset('img/photos_elpida/3.jpg')  }}" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="{{  asset('img/photos_elpida/4.jpg')  }}" style="width:100%">
+    </div>
 
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="{{  asset('img/photos_elpida/5.jpg')  }}" style="width:100%">
+    </div>
 
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="{{  asset('img/photos_elpida/6.jpg')  }}" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div style="display: flex;">
+
+      <div class="column">
+        <img class="demo cursor" src="{{  asset('img/photos_elpida/1.jpg')  }}" style="width:100%" onclick="currentSlide(1)" alt="Πτυχίο Ωδικής, Ελληνικόν Ωδείον, 1938">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="{{  asset('img/photos_elpida/2.jpg')  }}" style="width:100%" onclick="currentSlide(2)" alt="Πτυχίο Αρμονίας, Ελληνικόν Ωδείον, 1950">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="{{  asset('img/photos_elpida/3.jpg')  }}" style="width:100%" onclick="currentSlide(3)" alt="Πτυχίο Διδασκαλίας Πιάνου, Εθνικόν Ωδείον, 1954">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="{{  asset('img/photos_elpida/4.jpg')  }}" style="width:100%" onclick="currentSlide(4)" alt="Κοσμική εκδήλωση Λυκείου των Ελληνίδων Σερρών στον Ορφέα, 18-04-1959">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="{{  asset('img/photos_elpida/5.jpg')  }}" style="width:100%" onclick="currentSlide(5)" alt="Χορωδία του Γυμνασίου Θηλέων Σερρών, Κρόνιο Σερρών, 25-03-1952">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="{{  asset('img/photos_elpida/6.jpg')  }}" style="width:100%" onclick="currentSlide(6)" alt="Βράβευση από τον Δήμαρχο Σερρών Ανδρέα Ανδρέου, Σέρρες δεκαετία ‘80">
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+@endsection
+
+@section('pagespecificscripts')
+<script src="{{ asset('js/gallery-script.js') }}"></script>
 @endsection

@@ -37,3 +37,9 @@ app.component('example-component', ExampleComponent);
  */
 
 app.mount('#app');
+
+
+import $ from 'jquery';
+window.$ = window.jQuery = $;
+
+import 'popper.js';
