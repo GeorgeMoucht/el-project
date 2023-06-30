@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BioElpidaController;
+use App\Http\Controllers\AdminAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,11 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/elpida-bio', [BioElpidaController::class, 'render'])->name('elpida-bio');
+
+// Admin login routes
+Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
+
 // Route::middleware(['auth'])->group(function () {
 //     Route::get('/home', [HomeController::class, 'index'])->name('home');
 // });
