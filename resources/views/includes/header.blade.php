@@ -22,4 +22,6 @@
 
     <script src="https://use.fontawesome.com/2897336d5a.js"></script>
 
+    @yield('pagespecificstyles')
+
 </head>
