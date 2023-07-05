@@ -58,7 +58,7 @@
 
                                     <!-- Admin Links -->
                                     @if(Auth::user()->admin)
-                                        <a class="dropdown-item" href="" onclick="event.preventDefault();">Dashboard</a>
+                                        <a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a>
                                     @endif
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
