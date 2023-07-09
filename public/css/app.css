@@ -231,6 +231,14 @@ Elpidas bio RULES
     background-position: center;
 }
 
+.header-image-vas
+{
+  background-image: url('../img/photos_vasilis/1.jpg');
+  width: 100%;
+  height: 40vh;
+  background-position: 50% 40%;
+}
+
 .header-image .filter
 {
     width: 100%;
@@ -255,6 +263,35 @@ Elpidas bio RULES
     transform: translate(50%, -50%);
     animation-duration: 3s;
     animation-delay: 1s;
+}
+
+@media only screen and (max-width: 1318px) {
+  .header {
+    left: 10%;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .header {
+    left: 5%;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .header {
+    left: -5%;
+  }
+
+  .header h1 {
+    font-size: 35px !important;
+  }
+}
+
+@media only screen and (max-width: 512px)
+{
+  .header {
+    left: -10%;
+  }
 }
 
 .header h1
