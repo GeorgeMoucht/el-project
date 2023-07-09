@@ -88,13 +88,13 @@
     <div class="container" style="margin-top: 2rem; margin-bottom: 2rem;">
       <div class="row justify-content-md-center">
         <div class="col gallery-item" id="elp-gall-1">
-          <img src="{{  asset('img/photos_elpida/1.jpg')  }}" alt="" onclick="openModal(); currentSlide(1)">
+          <img src="{{  asset('img/photos_elpida/1.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(1)">
         </div>
         <div class="col gallery-item" id="elp-gall-2">
-          <img src="{{  asset('img/photos_elpida/2.jpg')  }}" alt="" onclick="openModal(); currentSlide(2)">
+          <img src="{{  asset('img/photos_elpida/2.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(2)">
         </div>
         <div class="col gallery-item" id="elp-gall-3">
-          <img src="{{  asset('img/photos_elpida/3.jpg')  }}" alt="" onclick="openModal(); currentSlide(3)">
+          <img src="{{  asset('img/photos_elpida/3.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(3)">
         </div>
 
 
@@ -105,21 +105,21 @@
       <div class="row justify-content-md-center">
 
         <div class="col gallery-item" id="elp-gall-4">
-            <img src="{{  asset('img/photos_elpida/6.jpg')  }}" alt="" onclick="openModal(); currentSlide(6)">
+            <img src="{{  asset('img/photos_elpida/6.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(6)">
         </div>
         <div class="col gallery-item" id="elp-gall-5">
-          <img src="{{  asset('img/photos_elpida/5.jpg')  }}" alt="" onclick="openModal(); currentSlide(5)">
+          <img src="{{  asset('img/photos_elpida/5.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(5)">
         </div>
         <div class="col gallery-item" id="elp-gall-6">
-          <img src="{{  asset('img/photos_elpida/4.jpg')  }}" alt="" onclick="openModal(); currentSlide(4)">
+          <img src="{{  asset('img/photos_elpida/4.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(4)">
         </div>
 
       </div>
     </div>    
 </div>
 
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
+<div id="elpidasModal" class="modal">
+  <span class="close cursor" onclick="closeModal('elpidasModal')">&times;</span>
   <div class="modal-content">
 
     <div class="mySlides">
