@@ -25,7 +25,7 @@
                             </a>
                             <!-- DropDown List -->
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Βασίλειος Βεηλικτσίδης</a></li>
+                                <li><a class="dropdown-item" href="{{ route('vasilis-bio') }}">Βασίλειος Βεηλικτσίδης</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="{{ route('elpida-bio') }}">Ελπίδα Βεηλικτσίδη</a></li>
                             </ul>
