@@ -30,6 +30,10 @@
                                 <li><a class="dropdown-item" href="{{ route('elpida-bio') }}">Ελπίδα Βεηλικτσίδη</a></li>
                             </ul>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('music-files') }}" class="nav-link">Μουσικολογικό Αρχείο</a>                         
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BioElpidaController;
 use App\Http\Controllers\BioVasilisController;
+use App\Http\Controllers\MusicFilesController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminDashboard;
 use App\Http\Middleware\AdminMiddleware;
@@ -30,6 +31,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/elpida-bio', [BioElpidaController::class, 'render'])->name('elpida-bio');
 
 Route::get('/vasilis-bio', [BioVasilisController::class, 'render'])->name('vasilis-bio');
+
+Route::get('/music-files', [MusicFilesController::class, 'render'])->name('music-files');
 
 // Admin login routes
 Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
