@@ -59,16 +59,16 @@
     <div class="container" style="margin-top: 2rem; margin-bottom: 2rem;">
       <div class="row justify-content-md-center">
         <div class="col gallery-item" id="elp-gall-1">
-          <img src="{{  asset('img/photos_vasilis/1.jpg')  }}" alt="" onclick="openModal('vasilisModal'); currentSlide(1)">
+          <img src="{{  asset('img/vasilis/N-1.jpg')  }}" alt="" onclick="openModal('vasilisModal'); currentSlide(1)">
         </div>
         <div class="col gallery-item" id="elp-gall-2">
-          <img src="{{  asset('img/photos_vasilis/2.jpg')  }}" alt="" onclick="openModal('vasilisModal'); currentSlide(2)">
+          <img src="{{  asset('img/vasilis/N-2.jpg')  }}" alt="" onclick="openModal('vasilisModal'); currentSlide(2)">
         </div>
         <div class="col gallery-item" id="elp-gall-3">
-          <img src="{{  asset('img/photos_vasilis/3.jpg')  }}" alt="" onclick="openModal('vasilisModal'); currentSlide(3)">
+          <img src="{{  asset('img/vasilis/N-3.jpg')  }}" alt="" onclick="openModal('vasilisModal'); currentSlide(3)">
         </div>
         <div class="col gallery-item" id="elp-gall-4">
-          <img src="{{  asset('img/photos_vasilis/4.png')  }}" alt="" onclick="openModal('vasilisModal'); currentSlide(4)">
+          <img src="{{  asset('img/vasilis/N-4.jpg')  }}" alt="" onclick="openModal('vasilisModal'); currentSlide(4)">
         </div>
     </div>
 </div>
@@ -79,22 +79,22 @@
 
     <div class="mySlides">
       <div class="numbertext">1 / 6</div>
-      <img src="{{  asset('img/photos_vasilis/1.jpg')  }}" style="width:100%">
+      <img src="{{  asset('img/vasilis/N-1.jpg')  }}" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 6</div>
-      <img src="{{  asset('img/photos_vasilis/2.jpg')  }}" style="width:100%">
+      <img src="{{  asset('img/vasilis/N-2.jpg')  }}" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 6</div>
-      <img src="{{  asset('img/photos_vasilis/3.jpg')  }}" style="width:100%">
+      <img src="{{  asset('img/vasilis/N-3.jpg')  }}" style="width:100%">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">4 / 6</div>
-      <img src="{{  asset('img/photos_vasilis/4.png')  }}" style="width:100%">
+      <img src="{{  asset('img/vasilis/N-4.jpg')  }}" style="width:100%">
     </div>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -107,16 +107,16 @@
     <div style="display: flex;">
 
       <div class="column">
-        <img class="demo cursor" src="{{  asset('img/photos_vasilis/1.jpg')  }}" style="width:100%" onclick="currentSlide(1)" alt="Πτυχίο Ωδικής, Ελληνικόν Ωδείον, 1938">
+        <img class="demo cursor" src="{{  asset('img/vasilis/N-1.jpg')  }}" style="width:100%" onclick="currentSlide(1)" alt="Πτυχίο Ωδικής, Ελληνικόν Ωδείον, 1938">
       </div>
       <div class="column">
-        <img class="demo cursor" src="{{  asset('img/photos_vasilis/2.jpg')  }}" style="width:100%" onclick="currentSlide(2)" alt="Πτυχίο Αρμονίας, Ελληνικόν Ωδείον, 1950">
+        <img class="demo cursor" src="{{  asset('img/vasilis/N-2.jpg')  }}" style="width:100%" onclick="currentSlide(2)" alt="Πτυχίο Αρμονίας, Ελληνικόν Ωδείον, 1950">
       </div>
       <div class="column">
-        <img class="demo cursor" src="{{  asset('img/photos_vasilis/3.jpg')  }}" style="width:100%" onclick="currentSlide(3)" alt="Πτυχίο Διδασκαλίας Πιάνου, Εθνικόν Ωδείον, 1954">
+        <img class="demo cursor" src="{{  asset('img/vasilis/N-3.jpg')  }}" style="width:100%" onclick="currentSlide(3)" alt="Πτυχίο Διδασκαλίας Πιάνου, Εθνικόν Ωδείον, 1954">
       </div>
       <div class="column">
-        <img class="demo cursor" src="{{  asset('img/photos_vasilis/4.png')  }}" style="width:100%" onclick="currentSlide(4)" alt="Κοσμική εκδήλωση Λυκείου των Ελληνίδων Σερρών στον Ορφέα, 18-04-1959">
+        <img class="demo cursor" src="{{  asset('img/vasilis/N-4.jpg')  }}" style="width:100%" onclick="currentSlide(4)" alt="Κοσμική εκδήλωση Λυκείου των Ελληνίδων Σερρών στον Ορφέα, 18-04-1959">
       </div>
     </div>
 

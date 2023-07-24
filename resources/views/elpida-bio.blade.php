@@ -88,13 +88,13 @@
     <div class="container" style="margin-top: 2rem; margin-bottom: 2rem;">
       <div class="row justify-content-md-center">
         <div class="col gallery-item" id="elp-gall-1">
-          <img src="{{  asset('img/photos_elpida/1.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(1)">
+          <img src="{{  asset('img/elpida/N-1.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(1)">
         </div>
         <div class="col gallery-item" id="elp-gall-2">
-          <img src="{{  asset('img/photos_elpida/2.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(2)">
+          <img src="{{  asset('img/elpida/N-2.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(2)">
         </div>
         <div class="col gallery-item" id="elp-gall-3">
-          <img src="{{  asset('img/photos_elpida/3.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(3)">
+          <img src="{{  asset('img/elpida/N-3.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(3)">
         </div>
 
 
@@ -105,13 +105,13 @@
       <div class="row justify-content-md-center">
 
         <div class="col gallery-item" id="elp-gall-4">
-            <img src="{{  asset('img/photos_elpida/6.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(6)">
+            <img src="{{  asset('img/elpida/N-6.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(6)">
         </div>
         <div class="col gallery-item" id="elp-gall-5">
-          <img src="{{  asset('img/photos_elpida/5.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(5)">
+          <img src="{{  asset('img/elpida/N-5.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(5)">
         </div>
         <div class="col gallery-item" id="elp-gall-6">
-          <img src="{{  asset('img/photos_elpida/4.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(4)">
+          <img src="{{  asset('img/elpida/N-4.jpg')  }}" alt="" onclick="openModal('elpidasModal'); currentSlide(4)">
         </div>
 
       </div>
@@ -124,32 +124,32 @@
 
     <div class="mySlides">
       <div class="numbertext">1 / 6</div>
-      <img src="{{  asset('img/photos_elpida/1.jpg')  }}" style="width:100%">
+      <img src="{{  asset('img/elpida/N-1.jpg')  }}" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 6</div>
-      <img src="{{  asset('img/photos_elpida/2.jpg')  }}" style="width:100%">
+      <img src="{{  asset('img/elpida/N-2.jpg')  }}" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 6</div>
-      <img src="{{  asset('img/photos_elpida/3.jpg')  }}" style="width:100%">
+      <img src="{{  asset('img/elpida/N-3.jpg')  }}" style="width:100%">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">4 / 6</div>
-      <img src="{{  asset('img/photos_elpida/4.jpg')  }}" style="width:100%">
+      <img src="{{  asset('img/elpida/N-4.jpg')  }}" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">5 / 6</div>
-      <img src="{{  asset('img/photos_elpida/5.jpg')  }}" style="width:100%">
+      <img src="{{  asset('img/elpida/N-5.jpg')  }}" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">6 / 6</div>
-      <img src="{{  asset('img/photos_elpida/6.jpg')  }}" style="width:100%">
+      <img src="{{  asset('img/elpida/N-6.jpg')  }}" style="width:100%">
     </div>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -162,22 +162,22 @@
     <div style="display: flex;">
 
       <div class="column">
-        <img class="demo cursor" src="{{  asset('img/photos_elpida/1.jpg')  }}" style="width:100%" onclick="currentSlide(1)" alt="Πτυχίο Ωδικής, Ελληνικόν Ωδείον, 1938">
+        <img class="demo cursor" src="{{  asset('img/elpida/N-1.jpg')  }}" style="width:100%" onclick="currentSlide(1)" alt="Πτυχίο Ωδικής, Ελληνικόν Ωδείον, 1938">
       </div>
       <div class="column">
-        <img class="demo cursor" src="{{  asset('img/photos_elpida/2.jpg')  }}" style="width:100%" onclick="currentSlide(2)" alt="Πτυχίο Αρμονίας, Ελληνικόν Ωδείον, 1950">
+        <img class="demo cursor" src="{{  asset('img/elpida/N-2.jpg')  }}" style="width:100%" onclick="currentSlide(2)" alt="Πτυχίο Αρμονίας, Ελληνικόν Ωδείον, 1950">
       </div>
       <div class="column">
-        <img class="demo cursor" src="{{  asset('img/photos_elpida/3.jpg')  }}" style="width:100%" onclick="currentSlide(3)" alt="Πτυχίο Διδασκαλίας Πιάνου, Εθνικόν Ωδείον, 1954">
+        <img class="demo cursor" src="{{  asset('img/elpida/N-3.jpg')  }}" style="width:100%" onclick="currentSlide(3)" alt="Πτυχίο Διδασκαλίας Πιάνου, Εθνικόν Ωδείον, 1954">
       </div>
       <div class="column">
-        <img class="demo cursor" src="{{  asset('img/photos_elpida/4.jpg')  }}" style="width:100%" onclick="currentSlide(4)" alt="Κοσμική εκδήλωση Λυκείου των Ελληνίδων Σερρών στον Ορφέα, 18-04-1959">
+        <img class="demo cursor" src="{{  asset('img/elpida/N-4.jpg')  }}" style="width:100%" onclick="currentSlide(4)" alt="Κοσμική εκδήλωση Λυκείου των Ελληνίδων Σερρών στον Ορφέα, 18-04-1959">
       </div>
       <div class="column">
-        <img class="demo cursor" src="{{  asset('img/photos_elpida/5.jpg')  }}" style="width:100%" onclick="currentSlide(5)" alt="Χορωδία του Γυμνασίου Θηλέων Σερρών, Κρόνιο Σερρών, 25-03-1952">
+        <img class="demo cursor" src="{{  asset('img/elpida/N-5.jpg')  }}" style="width:100%" onclick="currentSlide(5)" alt="Χορωδία του Γυμνασίου Θηλέων Σερρών, Κρόνιο Σερρών, 25-03-1952">
       </div>
       <div class="column">
-        <img class="demo cursor" src="{{  asset('img/photos_elpida/6.jpg')  }}" style="width:100%" onclick="currentSlide(6)" alt="Βράβευση από τον Δήμαρχο Σερρών Ανδρέα Ανδρέου, Σέρρες δεκαετία ‘80">
+        <img class="demo cursor" src="{{  asset('img/elpida/N-6.jpg')  }}" style="width:100%" onclick="currentSlide(6)" alt="Βράβευση από τον Δήμαρχο Σερρών Ανδρέα Ανδρέου, Σέρρες δεκαετία ‘80">
       </div>
 
     </div>
