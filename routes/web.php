@@ -7,6 +7,7 @@ use App\Http\Controllers\BioVasilisController;
 use App\Http\Controllers\MusicFilesController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminDashboard;
+use App\Http\Controllers\AdminUsers;
 use App\Http\Middleware\AdminMiddleware;
 
 /*
@@ -41,6 +42,7 @@ Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.
 
 Route::middleware(['admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminDashboard::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/admin/users', [AdminUsers::class, 'render'])->name('admin.users');
 });
 
 // Route::middleware(['auth'])->group(function () {
