@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\UserModel;
 
 class AdminUsers extends Controller
 {
@@ -23,6 +24,11 @@ class AdminUsers extends Controller
      */
     public function render()
     {
-        return view('admin.users');
+        $data = UserModel::all();
+        // echo "<pre>";
+        // var_dump($data);
+        // echo "</pre>";
+        // exit;
+        return view('admin.users', ['users'=>$data]);
     }
 }
