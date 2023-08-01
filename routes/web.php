@@ -8,6 +8,8 @@ use App\Http\Controllers\MusicFilesController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminDashboard;
 use App\Http\Controllers\AdminUsers;
+use App\Http\Controllers\GalleryController;
+
 use App\Http\Middleware\AdminMiddleware;
 
 /*
@@ -39,6 +41,7 @@ Route::get('/music-files', [MusicFilesController::class, 'render'])->name('music
 Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
 
+Route::get('/gallery', [GalleryController::class, 'render'])->name('gallery');
 
 Route::middleware(['admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminDashboard::class, 'dashboard'])->name('admin.dashboard');
