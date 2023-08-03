@@ -1,8 +1,129 @@
-.w3-quarter img {
-    margin-bottom: -6px; cursor: pointer
+/* .glry-item {
+  width: 400px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.glry-item img:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.53);
+}
+
+.middle-tx {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 
-.w3-quarter img:hover {
-    opacity: 0.6; transition: 0.3s
+.glry-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.gallery-container:hover .glry-img {
+  opacity: 0.3;
+}
+
+.gallery-container:hover .middle-tx {
+  opacity: 1;
+} */
+
+.gallery-b-cnt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.gallery-itm {
+  position: relative;
+  width: 370px !important;
+}
+
+.gl-image {
+  opacity: 1;
+  display: block;
+  width: 100% !important;
+  height: 240px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gallery-itm:hover .gl-image {
+  opacity: 0.3;
+}
+
+.gallery-itm:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+
+/* Modal */
+.modal-cnt
+{
+  display: none;
+  position:fixed;
+  z-index: 1 ;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content-cnt {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
