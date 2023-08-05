@@ -8,10 +8,9 @@
 
 <!-- Gallery section -->
 <div class="container">
-
   <div class="row gallery-b-cnt" id="modalBtn1">
     <!-- Gallery Item -->
-    <div class="gallery-itm">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 gallery-itm">
       <img src="{{ asset('img/gallery_page/1.jpg') }}" alt="Avatar" class="gl-image">
       <div class="middle">
         <div class="text">John Doe</div>
@@ -19,7 +18,7 @@
     </div>
 
     <!-- Gallery Item -->
-    <div class="gallery-itm">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 gallery-itm">
       <img src="{{ asset('img/gallery_page/2.jpg') }}" alt="Avatar" class="gl-image">
       <div class="middle">
         <div class="text">John Doe</div>
@@ -27,83 +26,36 @@
     </div>
 
     <!-- Gallery Item -->
-    <div class="gallery-itm">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 gallery-itm">
+      <img src="{{ asset('img/gallery_page/3.jpg') }}" alt="Avatar" class="gl-image">
+      <div class="middle">
+        <div class="text">John Doe</div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 gallery-itm">
+      <img src="{{ asset('img/gallery_page/3.jpg') }}" alt="Avatar" class="gl-image">
+      <div class="middle">
+        <div class="text">John Doe</div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 gallery-itm">
+      <img src="{{ asset('img/gallery_page/3.jpg') }}" alt="Avatar" class="gl-image">
+      <div class="middle">
+        <div class="text">John Doe</div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 gallery-itm">
       <img src="{{ asset('img/gallery_page/3.jpg') }}" alt="Avatar" class="gl-image">
       <div class="middle">
         <div class="text">John Doe</div>
       </div>
     </div>
   </div>
-
-  <div class="row gallery-b-cnt">
-    <!-- Gallery Item -->
-    <div class="gallery-itm">
-      <img src="{{ asset('img/gallery_page/4.jpg') }}" alt="Avatar" class="gl-image">
-      <div class="middle">
-        <div class="text">John Doe</div>
-      </div>
-    </div>
-
-    <!-- Gallery Item -->
-    <div class="gallery-itm">
-      <img src="{{ asset('img/gallery_page/5.jpg') }}" alt="Avatar" class="gl-image">
-      <div class="middle">
-        <div class="text">John Doe</div>
-      </div>
-    </div>
-
-
-    <!-- Gallery Item -->
-    <div class="gallery-itm">
-      <img src="{{ asset('img/gallery_page/6.jpg') }}" alt="Avatar" class="gl-image">
-      <div class="middle">
-        <div class="text">John Doe</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row gallery-b-cnt">
-    <!-- Gallery Item -->
-    <div class="gallery-itm">
-      <img src="{{ asset('img/gallery_page/7.jpg') }}" alt="Avatar" class="gl-image">
-      <div class="middle">
-        <div class="text">John Doe</div>
-      </div>
-    </div>
-
-    <!-- Gallery Item -->
-    <div class="gallery-itm">
-      <img src="{{ asset('img/gallery_page/8.jpg') }}" alt="Avatar" class="gl-image">
-      <div class="middle">
-        <div class="text">John Doe</div>
-      </div>
-    </div>
-
-
-    <!-- Gallery Item -->
-    <div class="gallery-itm">
-      <img src="{{ asset('img/gallery_page/9.jpg') }}" alt="Avatar" class="gl-image">
-      <div class="middle">
-        <div class="text">John Doe</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row gallery-b-cnt">
-    <!-- Gallery Item -->
-    <div class="gallery-itm">
-      <img src="{{ asset('img/gallery_page/10.jpg') }}" alt="Avatar" class="gl-image">
-      <div class="middle">
-        <div class="text">John Doe</div>
-      </div>
-    </div>
-    <!-- Gallery Item -->
-    <div class="gallery-itm"></div>
-    <!-- Gallery Item -->
-    <div class="gallery-itm"></div>
-  </div>
-
 </div>
+
 
 <div class="modal-cnt" id="modal1">
   <div class="modal-content">
