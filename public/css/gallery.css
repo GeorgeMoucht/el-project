@@ -7,6 +7,11 @@
 
 .gallery-itm {
   position: relative;
+  margin-bottom: 1rem;
+}
+
+.gallery-itm:hover {
+  cursor: pointer;
 }
 
 .gl-image {
@@ -28,6 +33,10 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  background-color: #124935;
+  border-radius: 12px;
+  min-width: 320px;
+
 }
 
 .gallery-itm:hover .gl-image {
@@ -39,13 +48,22 @@
 }
 
 .text {
-  background-color: #04AA6D;
-  color: white;
+  color: white; 
   font-size: 16px;
-  padding: 16px 32px;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
-
+.mini-text {
+  font-size: 14px;
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  text-align: left;
+}
 
 /* Modal */
 .modal-cnt
