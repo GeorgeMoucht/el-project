@@ -19,7 +19,7 @@
                         <span>Όλοι οι χρήστες</span>
                     </a>
 
-                    <a href="{{ route('admin.edit-gallery') }}" class="list-group-item list-group-item-action py-2 ripple {{ $currentRoute === 'admin.users' ? 'active' : '' }}">
+                    <a href="{{ route('admin.edit-gallery') }}" class="list-group-item list-group-item-action py-2 ripple {{ $currentRoute === 'admin.edit-gallery' ? 'active' : '' }}">
                         <i class="fas fa-chart-area fa-fw me-3"></i>
                         <span>Αρχείο Εικόνων</span>
                     </a>
