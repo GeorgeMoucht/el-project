@@ -43,11 +43,13 @@ Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name(
 Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
 
 Route::get('/gallery', [GalleryController::class, 'render'])->name('gallery');
+// Route::post('galllery/add-gallery-image', [])
 
 Route::middleware(['admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminDashboard::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/admin/users', [AdminUsers::class, 'render'])->name('admin.users');
     Route::get('/admin/edit-gallery', [AdminEditGallery::class, 'render'])->name('admin.edit-gallery');
+    Route::post('/admin/edit-gallery/add-image', [AdminEditGallery::class, 'storeImage'])->name('admin.edit-gallery.add-image');
 });
 
 // Route::middleware(['auth'])->group(function () {
