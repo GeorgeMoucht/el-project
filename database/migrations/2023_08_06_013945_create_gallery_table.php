@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('image_name')->unique();
             $table->timestamp('edited_at')->nullable();
-            $table->timestamp('uploaded_at');
+            $table->timestamp('uploaded_at')->nullable();
         });
     }
 
