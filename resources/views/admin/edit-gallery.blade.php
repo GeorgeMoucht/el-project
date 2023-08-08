@@ -7,6 +7,11 @@
 @section('content')
 
     <div class="container">
+        @if(session('flashMessage'))
+            <div class="alert alert-success">
+                {{ session('flashMessage') }}
+            </div>
+        @endif
         <div class="row">
             <div class="col-md-12">
                 <div class="card">

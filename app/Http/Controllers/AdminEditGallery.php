@@ -12,10 +12,16 @@ class AdminEditGallery extends Controller
         return view('admin.edit-gallery');
     }
 
+    // Post data function.
+    // We want to retrieve the posted image from the form
+    // save the image into
+    // storage/app/public/images/gl directory
+    // And store the image name into gallery table on our database.
     public function uploadImage(Request $request)
-    {
-        // Save the image into the storage.
+    {   
+        // Check if there is a posted image to be stored.
         if($request->hasFile('uploadedImage')) {
+            // Save the image into the storage.
             $destination_path = "public/images/gl";
             $image = $request->file('uploadedImage');
             $image_name = $image->getClientOriginalName();
@@ -23,10 +29,13 @@ class AdminEditGallery extends Controller
         
             $input['uploadedImage'] = $image_name;
 
+            // Save image name in database gallery table.
             $gallery = new GalleryModel();
             $gallery->image_name = $image_name;
-
             $gallery->save();
+
+            // Set flash message to inform the user.
+            session()->flash('flashMessage', 'Image saved succesfully');
         }
 
         // Redirect back to edit-gallery view.
