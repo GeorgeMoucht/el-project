@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('gallery', function (Blueprint $table) {
             $table->id();
             $table->string('image_name')->unique();
-            $table->timestamp('edited_at')->nullable();
-            $table->timestamp('uploaded_at')->nullable();
+            $table->timestamps();
         });
     }
 
