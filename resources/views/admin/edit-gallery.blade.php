@@ -19,9 +19,14 @@
                         <form method="post" action="{{ route('admin.edit-gallery.upload') }}" enctype="multipart/form-data">
                             @csrf
                             <h5 class="card-title text-uppercase mb-3">Αναίβασμα νέας εικόνας</h5>
+                            <div class="input-group flex-nowrap mb-3">
+                                <input type="text" name="title" class="form-control" placeholder="Ξενόγλωσσος Τίτλος" aria-label="Title" aria-describedby="addon-wrapping">
+                            </div>
+                            <div class="input-group flex-nowrap mb-3">
+                                <input type="text" name="text" class="form-control" placeholder="Ελληνικός Τίτλος" aria-label="text" aria-describedby="addon-wrapping">
+                            </div>
                             <div class="input-group mb-3">
                                 <input type="file"  name="uploadedImage" class="form-control">
-                                <label class="input-group-text">Upload</label>
                             </div>
                             <button class="btn btn-primary" type="submit">Submit</button>
                         </form>

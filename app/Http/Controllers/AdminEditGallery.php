@@ -29,9 +29,17 @@ class AdminEditGallery extends Controller
         
             $input['uploadedImage'] = $image_name;
 
+            $image_title = $request->input('title');
+            $image_text = $request->input('text');
+
+            $input['image_title'] = $image_title;
+            $input['image_text'] = $image_text;
+
             // Save image name in database gallery table.
             $gallery = new GalleryModel();
             $gallery->image_name = $image_name;
+            $gallery->title = $input['image_title'];
+            $gallery->text = $input['image_text'];
             $gallery->save();
 
             // Set flash message to inform the user.
