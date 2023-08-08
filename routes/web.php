@@ -49,7 +49,7 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminDashboard::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/admin/users', [AdminUsers::class, 'render'])->name('admin.users');
     Route::get('/admin/edit-gallery', [AdminEditGallery::class, 'render'])->name('admin.edit-gallery');
-    Route::post('/admin/edit-gallery/add-image', [AdminEditGallery::class, 'storeImage'])->name('admin.edit-gallery.add-image');
+    Route::post('/admin/edit-gallery/upload', [AdminEditGallery::class, 'uploadImage'])->name('admin.edit-gallery.upload');
 });
 
 // Route::middleware(['auth'])->group(function () {
