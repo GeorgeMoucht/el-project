@@ -18,14 +18,12 @@
                         <i class="fas fa-chart-area fa-fw me-3"></i>
                         <span>Όλοι οι χρήστες</span>
                     </a>
-                    <!-- <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
+
+                    <a href="{{ route('admin.edit-gallery') }}" class="list-group-item list-group-item-action py-2 ripple {{ $currentRoute === 'admin.edit-gallery' ? 'active' : '' }}">
                         <i class="fas fa-chart-area fa-fw me-3"></i>
-                        <span>Όλοι οι χρήστες</span>
-                    </a> -->
-                    <a href="#" class="list-group-item list-group-item-action py-2 ripple">
-                        <i class="fas fa-lock fa-fw me-3"></i>
-                        <span>Password</span>
+                        <span>Αρχείο Εικόνων</span>
                     </a>
+
                     <a href="#" class="list-group-item list-group-item-action py-2 ripple">
                         <i class="fas fa-chart-line fa-fw me-3"></i>
                         <span>Analytics</span>
