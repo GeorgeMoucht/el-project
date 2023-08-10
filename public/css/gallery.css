@@ -35,8 +35,37 @@
   text-align: center;
   background-color: #124935;
   border-radius: 12px;
-  min-width: 320px;
+  /* width: 320px; */
+  width: 80%;
 
+}
+
+@media only screen and (max-width: 1200px) {
+  .text {
+    font-size: 12px;
+  }
+
+  .mini-text {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .text {
+    font-size: 9px;
+    padding-top: .5rem !important;
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
+    padding-bottom: 0rem !important;
+  }
+  
+  .mini-text {
+    font-size: 6px;
+    padding-top: .5rem !important;
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
+    padding-bottom: 1rem !important;
+  }
 }
 
 .gallery-itm:hover .gl-image {
@@ -87,18 +116,4 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-}
-
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
