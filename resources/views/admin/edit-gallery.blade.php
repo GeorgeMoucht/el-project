@@ -22,12 +22,21 @@
                             <div class="input-group flex-nowrap mb-3">
                                 <input type="text" name="title" class="form-control" placeholder="Ξενόγλωσσος Τίτλος" aria-label="Title" aria-describedby="addon-wrapping">
                             </div>
+                            @error('title')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             <div class="input-group flex-nowrap mb-3">
                                 <input type="text" name="text" class="form-control" placeholder="Ελληνικός Τίτλος" aria-label="text" aria-describedby="addon-wrapping">
                             </div>
+                            @error('text')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             <div class="input-group mb-3">
                                 <input type="file"  name="uploadedImage" class="form-control">
                             </div>
+                            @error('uploadedImage')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             <button class="btn btn-primary" type="submit">Submit</button>
                         </form>
                     </div>
