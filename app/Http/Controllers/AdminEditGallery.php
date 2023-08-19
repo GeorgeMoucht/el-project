@@ -11,7 +11,9 @@ class AdminEditGallery extends Controller
 
     public function render()
     {
-        return view('admin.edit-gallery');
+        $data = GalleryModel::all();
+
+        return view('admin.edit-gallery', ['gallery_images'=>$data]);
     }
 
     // Post data function.
