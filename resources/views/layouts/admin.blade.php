@@ -9,7 +9,7 @@
         <!-- Sidebar -->
         <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
             <div class="position-sticky">
-                <div class="list-group list-group-flush mx-3 mt-4">
+                <div class="list-group list-group-flush mx-3 mt-4 scrollable">
                     <a href="{{ route('admin.dashboard') }}" class="list-group-item list-group-item-action py-2 ripple {{ $currentRoute === 'admin.dashboard' ? 'active' : '' }}" aria-current="true">
                         <i class="fas fa-tachometer-alt fa-fw me-3"></i>
                         <span>Γρήγορες Λειτουργίες</span>
@@ -65,8 +65,8 @@
             <!-- Container wrapper -->
             <div class="container-fluid">
                 <!-- Toggle button -->
-                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Brand -->
