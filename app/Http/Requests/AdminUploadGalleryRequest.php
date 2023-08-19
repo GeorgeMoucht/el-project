@@ -2,46 +2,33 @@
 
 namespace App\Http\Requests;
 
+use Closure;
+use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\UniqueImageName;
 
 class AdminUploadGalleryRequest extends FormRequest
 {
+ 
     /**
-     * Determine if the user is authorized to make this request.
-     */
-    public function authorize(): bool
-    {
-        return true;
-    }
-
-    /**
-     * Get the validation rules that apply to the request.
+     * Determine if the validation rule passes.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
+     * @param  string  $attribute
+     * @param  mixed  $value
+     * @return bool
      */
-    public function rules(): array
+    public function passes($attribute, $value)
     {
-        return [
-            'title' => 'required|string|max:50',
-            'text' => 'required|string|max:100',
-            'uploadedImage' => 'required|image|mimes:jpeg,png,jpg,gif'
-        ];
+        return GalleryModel::where('image_name', $value)->count() === 0;
     }
 
-    public function messages(): array
+    /**
+     * Get the validation error message.
+     *
+     * @return string
+     */
+    public function message()
     {
-        return [
-            'title.required' => 'Το πεδίο είναι απαραίτητο.',
-            'text.required' => 'Το πεδίο είναι απαραίτητο.',
-            'uploadedImage.required' => 'Το πεδίο είναι απαραίτητο.',
-            
-            'title.string' => 'Παρακαλώ συμπληρώστε το πεδίο μόνο με χαρακτήρες.',
-            'text.string' => 'Παρακαλώ συμπληρώστε το πεδίο μόνο με χαρακτήρες.',
-            'uploadedImage.image' => 'Το αρχείο πρέπει να είναι εικόνα jpeg, png, jpg ή gif.',
-
-            'title.max' => 'Ο τίτλος πρέπει να είναι μέχρι 50 χαρακτήρες',
-            'text.max' => 'Το κείμενο μπορεί να είναι μέχρι 100 χαρακτήρες',
-            'uploadedImage' =>  'Το αρχείο πρέπει να είναι εικόνα jpeg, png, jpg ή gif.'
-        ];
+        return 'The image name already exists in the database.';
     }
 }
