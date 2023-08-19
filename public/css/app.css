@@ -22,6 +22,17 @@ GLOBAL RULES
     display: none;
 }
 
+.scrollable {
+  overflow: auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 991px ) {
+  .scrollable {
+    height: 300px !important;
+  }
+}
+
 .cursor
 {
     cursor: pointer;
