@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\GalleryModel;
+use App\Http\Requests\AdminUploadGalleryRequest;
 
 class AdminEditGallery extends Controller
 {
+
     public function render()
     {
         return view('admin.edit-gallery');
@@ -17,7 +19,7 @@ class AdminEditGallery extends Controller
     // save the image into
     // storage/app/public/images/gl directory
     // And store the image name into gallery table on our database.
-    public function uploadImage(Request $request)
+    public function uploadImage(AdminUploadGalleryRequest $request)
     {   
         // Check if there is a posted image to be stored.
         if($request->hasFile('uploadedImage')) {
