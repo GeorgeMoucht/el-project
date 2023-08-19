@@ -21,6 +21,7 @@ class AdminEditGallery extends Controller
     // And store the image name into gallery table on our database.
     public function uploadImage(AdminUploadGalleryRequest $request)
     {   
+
         // Check if there is a posted image to be stored.
         if($request->hasFile('uploadedImage')) {
             // Save the image into the storage.
@@ -31,11 +32,24 @@ class AdminEditGallery extends Controller
         
             $input['uploadedImage'] = $image_name;
 
+            // Check if the image name already exists in the database
+            $existingImage = GalleryModel::where('image_name', $image_name)->first();
+
+            // Check if image_name already exists.
+            if($existingImage) {
+                // Return in the view with flash error message.
+                return back()->withInput()->withErrors([
+                    'uploadedImage' => 'Το όνομα της εικόνας υπάρχει ήδη. Ανεβάστε την εικόνα με διαφορετικό όνομα.'
+                ]);
+            }
+
             $image_title = $request->input('title');
             $image_text = $request->input('text');
 
             $input['image_title'] = $image_title;
             $input['image_text'] = $image_text;
+
+
 
             // Save image name in database gallery table.
             $gallery = new GalleryModel();
@@ -47,6 +61,8 @@ class AdminEditGallery extends Controller
             // Set flash message to inform the user.
             session()->flash('flashMessage', 'Image saved succesfully');
         }
+
+    
 
         // Redirect back to edit-gallery view.
         return redirect()->route('admin.edit-gallery');
