@@ -65,7 +65,7 @@
                             </thead>
                             <tbody>
                                 @foreach ($gallery_images as $gallery_image)
-                                    <tr>
+                                    <tr class="gallery-it">
                                         <td class="pl-4">{{ $gallery_image->id }}</td>
                                         <td>
                                             {{ $gallery_image->image_name }}
@@ -93,7 +93,7 @@
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" style="width: 40px; height: 40px; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/pencil-fill.svg') }}" alt="edit-icon"> </button>
-                                            <button type="button" class="btn btn-outline-danger btn-circle btn-lg btn-circle ml-2" style="width: 40px; height: 40px; margin-left: .5rem; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/trash3-fill.svg') }}" alt="edit-icon"> </button>
+                                            <button type="button" class="btn btn-outline-danger btn-circle btn-lg btn-circle ml-2 open-modl"  data-modal="modal{{ $gallery_image->id }}" style="width: 40px; height: 40px; margin-left: .5rem; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/trash3-fill.svg') }}" alt="edit-icon"> </button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -104,6 +104,27 @@
             </div>
         </div>
 
+
+        @foreach ($gallery_images as $gallery_image)
+            <div class="modal" tabindex="-1" id="modal{{ $gallery_image->id }}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{ $gallery_image->title}}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal{{ $gallery_image->id }}" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary close-modal-btn" data-bs-dismiss="modal{{ $gallery_image->id }}">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+
     </div>
 
     
@@ -111,4 +132,5 @@
 
 @section('pagespecificscripts')
 <script src="{{ asset('js/admin-dashboard.js') }}"></script>
+<script src="{{ asset('js/edit-gallery.js') }}"></script>
 @endsection
