@@ -56,6 +56,7 @@
                                 <tr>
                                     <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
                                     <th scope="col" class="border-0 text-uppercase font-medium">Όνομα αρχείου</th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">Εικόνα</th>
                                     <th scope="col" class="border-0 text-uppercase font-medium">Τίτλος</th>
                                     <th scope="col" class="border-0 text-uppercase font-medium">Υπότιτλος</th>
                                     <th scope="col" class="border-0 text-uppercase font-medium">Τελευταία επεξεργασία</th>
@@ -72,6 +73,9 @@
                                         </td>
                                         <td>
                                             <span class="text-muted" style="font-size: 14px;">{{ $gallery_image->title }}</span>
+                                        </td>
+                                        <td>
+                                            <img width="250" src="{{ asset('storage/images/gl/' . $gallery_image->image_name) }}" class="img-thumbnail" alt="">
                                         </td>
                                         <td>
                                             <span class="text-muted" style="font-size: 14px;">{{ $gallery_image->text }}</span>
@@ -95,6 +99,7 @@
                                             <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" style="width: 40px; height: 40px; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/pencil-fill.svg') }}" alt="edit-icon"> </button>
                                             <button type="button" class="btn btn-outline-danger btn-circle btn-lg btn-circle ml-2 open-modl"  data-modal="modal{{ $gallery_image->id }}" style="width: 40px; height: 40px; margin-left: .5rem; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/trash3-fill.svg') }}" alt="edit-icon"> </button>
                                         </td>
+                                        <td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -110,20 +115,29 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">{{ $gallery_image->title}}</h5>
+                            <h5 class="modal-title">Διαγραφή Εικόνας</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal{{ $gallery_image->id }}" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p>Modal body text goes here.</p>
+                            <p>Είστε σίγουρος πως θέλετε να διαγράψετε οριστικά την εικόνα με όνομα <b style="text-decoration: underline;">{{ $gallery_image->image_name }}</b> </p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary close-modal-btn" data-bs-dismiss="modal{{ $gallery_image->id }}">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary close-modal-btn" data-bs-dismiss="modal{{ $gallery_image->id }}">Πίσω</button>
+                            <button type="button" class="btn btn-danger">Διαγραφή</button>
                         </div>
                     </div>
                 </div>
             </div>
         @endforeach
+
+
+        <!-- Mini image modal -->
+        <div class="modal-cnt" id="imageModal">
+            <div class="modal-content">
+                <span class="close" style="font-size: 45px; color: black; font-weight: lighter;">&times;</span>
+                <img id="miniModalImage" src="" alt="">
+            </div>
+        </div>
 
     </div>
 
@@ -134,3 +148,22 @@
 <script src="{{ asset('js/admin-dashboard.js') }}"></script>
 <script src="{{ asset('js/edit-gallery.js') }}"></script>
 @endsection
+
+<script>
+// $(document).ready(function() {
+//     $('.close-modal-btn').on('click', function() {
+//         var galleryId = $(this).data('gallery-id');
+//         // Send an AJAX request to delete the row
+//         $.ajax({
+//             url: '/admin/delete-gallery/' + galleryId,
+//             type: 'DELETE',
+//             success: function(response) {
+//                 // Handle success response if needed
+//             },
+//             error: function (xhr) {
+//                 // Handle error response if needed
+//             }
+//         });
+//     });
+// });
+</script>
