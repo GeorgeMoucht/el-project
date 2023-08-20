@@ -61,7 +61,7 @@ class AdminEditGallery extends Controller
             $gallery->save();
 
             // Set flash message to inform the user.
-            session()->flash('flashMessage', 'Image saved succesfully');
+            session()->flash('flashMessage', 'Η εικόνα αποθηκεύτηκε επιτυχώς.');
         }
 
     
@@ -71,4 +71,17 @@ class AdminEditGallery extends Controller
     }
 
 
+    public function delete($id)
+    {
+        try {
+            // Find the gallery record by ID and delete it
+            GalleryModel::findOrFail($id)->delete();
+            session()->flash('flashMessage', 'Η εικόνα διαγράφηκε επιτυχώς.');
+        } catch (\Exception $e) {
+            session()->flash('flashMessage', 'Κάτι πήγε στραβά... Παρακαλώ προσπαθήστε πάλι.');
+        }
+       
+        return redirect()->route('admin.edit-gallery'); // Redirect back to the edit gallery page
+    }
+    
 }
