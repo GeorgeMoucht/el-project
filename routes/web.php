@@ -50,6 +50,7 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/admin/users', [AdminUsers::class, 'render'])->name('admin.users');
     Route::get('/admin/edit-gallery', [AdminEditGallery::class, 'render'])->name('admin.edit-gallery');
     Route::post('/admin/edit-gallery/upload', [AdminEditGallery::class, 'uploadImage'])->name('admin.edit-gallery.upload');
+    Route::delete('/admin/edit-gallery/delete/{id}', [AdminEditGallery::class, 'delete'])->name('admin.edit-gallery.delete');
 });
 
 // Route::middleware(['auth'])->group(function () {
