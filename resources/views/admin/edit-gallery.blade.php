@@ -123,7 +123,11 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary close-modal-btn" data-bs-dismiss="modal{{ $gallery_image->id }}">Πίσω</button>
-                            <button type="button" class="btn btn-danger">Διαγραφή</button>
+                            <form method="post" action="{{ route('admin.edit-gallery.delete', ['id' => $gallery_image->id]) }}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Διαγραφή</button>
+                            </form>
                         </div>
                     </div>
                 </div>
