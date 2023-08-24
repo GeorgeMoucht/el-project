@@ -44,6 +44,18 @@
             </div>
         </div>
         
+        <!-- Display the errors from the Edit gallery image form. -->
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif 
+        <!-- End of displaying gallery edit image errors. -->
+
         <div class="row mt-4">
             <div class="col-md-12">
                 <div class="card">
@@ -151,7 +163,7 @@
                             @method('POST')
                             <div class="mb-3">
                                 <label for="title" class="form-label">Τίτλος</label>
-                                <input type="text" class="form-control" id="title" name="title" value="{{ $gallery_image->title }}">
+                                <input type="text" class="form-control" id="title" name="editTitle" value="{{ $gallery_image->title }}">
                             </div>
                             @error('title')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -159,7 +171,7 @@
 
                             <div class="mb-3">
                                 <label for="description" class="form-label">Περιγραφή</label>
-                                <textarea class="form-control" id="text" name="text" name="editUploadedImage" value="{{ $gallery_image->text }}"></textarea>
+                                <textarea class="form-control" id="text" name="text" name="editDescription" value="{{ $gallery_image->text }}"></textarea>
                             </div>
                             @error('editUploadedImage')
                                     <div class="alert alert-danger">{{ $message }}</div>

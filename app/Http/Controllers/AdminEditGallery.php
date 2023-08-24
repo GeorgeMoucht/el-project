@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AdminUpdateGalleryRequest;
 use Illuminate\Http\Request;
 use App\Models\GalleryModel;
 use App\Http\Requests\AdminUploadGalleryRequest;
@@ -11,7 +12,7 @@ class AdminEditGallery extends Controller
 
     public function render()
     {
-        $data = GalleryModel::all();
+        $data = GalleryModel::all(); 
 
         return view('admin.edit-gallery', ['gallery_images'=>$data]);
     }
@@ -82,11 +83,52 @@ class AdminEditGallery extends Controller
         return redirect()->route('admin.edit-gallery'); // Redirect back to the edit gallery page
     }
     
-    public function update(Request $request, $id) {
-        var_dump($request);exit;
-        $gallery_image = GalleryModel::findOrFail($id);
-        $gallery_image->update([
+    public function update(AdminUpdateGalleryRequest $request, $id) {
+        // var_dump($request);exit;
+        // $gallery_image = GalleryModel::findOrFail($id);
+        // $gallery_image->update([
             
+        // ]);
+        // Get the current record from the db.
+        $gallery = GalleryModel::findOrFail($id);
+
+        // Get the current title and description
+        $currentTitle = $gallery->title;
+        $currentDescription = $gallery->text;
+
+        //Get the submitted form value 
+        $newTitle = $request->input('editTitle');
+        $newDescription = $request->input('editDescription');
+
+        // Validate the new title and description
+        $request->validate([
+            'editTitle' => 'required|string',
+            'editDescription' => 'required|string'
         ]);
+
+        // Compare form values with current values
+        $titleChanged = $newTitle !== $currentTitle;
+        $descriptionChanged = $newDescription !== $currentDescription;
+
+        // Update the record if changes are detected
+        if($titleChanged || $descriptionChanged) {
+            if($titleChanged) {
+                $gallery->title = $newTitle;
+            }
+
+            if($descriptionChanged) {
+                $gallery->text = $newDescription;
+            }
+
+            $gallery->save();
+
+            //Set flash message indicating successful update
+            session()->flash('flashMessage', 'Τα στοιχεία ενημερώθηκαν επιτυχώς.');
+            
+            // Redirect back to where the user came from
+            return back();
+        }
+
+    
     }
 }
