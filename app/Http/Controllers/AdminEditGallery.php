@@ -24,45 +24,43 @@ class AdminEditGallery extends Controller
     public function uploadImage(AdminUploadGalleryRequest $request)
     {   
 
-        // Check if there is a posted image to be stored.
-        if($request->hasFile('uploadedImage')) {
-            // Save the image into the storage.
-            $destination_path = "public/images/gl";
-            $image = $request->file('uploadedImage');
-            $image_name = $image->getClientOriginalName();
-            $path = $request->file('uploadedImage')->storeAs($destination_path,$image_name);
-        
-            $input['uploadedImage'] = $image_name;
 
-            // Check if the image name already exists in the database
-            $existingImage = GalleryModel::where('image_name', $image_name)->first();
+        // Save the image into the storage.
+        $destination_path = "public/images/gl";
+        $image = $request->file('uploadedImage');
+        $image_name = $image->getClientOriginalName();
+        $path = $request->file('uploadedImage')->storeAs($destination_path,$image_name);
+    
+        $input['uploadedImage'] = $image_name;
+        // // Check if the image name already exists in the database
+        $existingImage = GalleryModel::where('image_name', $image_name)->first();
 
-            // Check if image_name already exists.
-            if($existingImage) {
-                // Return in the view with flash error message.
-                return back()->withInput()->withErrors([
-                    'uploadedImage' => 'Το όνομα της εικόνας υπάρχει ήδη. Ανεβάστε την εικόνα με διαφορετικό όνομα.'
-                ]);
-            }
-
-            $image_title = $request->input('title');
-            $image_text = $request->input('text');
-
-            $input['image_title'] = $image_title;
-            $input['image_text'] = $image_text;
-
-
-
-            // Save image name in database gallery table.
-            $gallery = new GalleryModel();
-            $gallery->image_name = $image_name;
-            $gallery->title = $input['image_title'];
-            $gallery->text = $input['image_text'];
-            $gallery->save();
-
-            // Set flash message to inform the user.
-            session()->flash('flashMessage', 'Η εικόνα αποθηκεύτηκε επιτυχώς.');
+        // Check if image_name already exists.
+        if($existingImage) {
+            // Return in the view with flash error message.
+            return back()->withInput()->withErrors([
+                'uploadedImage' => 'Το όνομα της εικόνας υπάρχει ήδη. Ανεβάστε την εικόνα με διαφορετικό όνομα.'
+            ]);
         }
+
+        $image_title = $request->input('title');
+        $image_text = $request->input('description');
+
+        $input['image_title'] = $image_title;
+        $input['image_text'] = $image_text;
+
+
+
+        // Save image name in database gallery table.
+        $gallery = new GalleryModel();
+        $gallery->image_name = $request->file('uploadedImage')->getClientOriginalName();
+        $gallery->title = $image_title;
+        $gallery->text = $image_text;
+        $gallery->save();
+
+        // Set flash message to inform the user.
+        session()->flash('flashMessage', 'Η εικόνα αποθηκεύτηκε επιτυχώς.');
+    
 
     
 

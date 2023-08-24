@@ -26,9 +26,9 @@
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                             <div class="input-group flex-nowrap mb-3">
-                                <input type="text" name="text" class="form-control" placeholder="Ελληνικός Τίτλος" aria-label="text" aria-describedby="addon-wrapping">
+                                <input type="text" name="description" class="form-control" placeholder="Ελληνικός Τίτλος" aria-label="text" aria-describedby="addon-wrapping">
                             </div>
-                            @error('text')
+                            @error('description')
                                     <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                             <div class="input-group mb-3">
@@ -153,11 +153,17 @@
                                 <label for="title" class="form-label">Τίτλος</label>
                                 <input type="text" class="form-control" id="title" name="title" value="{{ $gallery_image->title }}">
                             </div>
+                            @error('title')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
 
                             <div class="mb-3">
                                 <label for="description" class="form-label">Περιγραφή</label>
-                                <textarea class="form-control" id="text" name="text" value="{{ $gallery_image->text }}"></textarea>
+                                <textarea class="form-control" id="text" name="text" name="editUploadedImage" value="{{ $gallery_image->text }}"></textarea>
                             </div>
+                            @error('editUploadedImage')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary close-modal-btn close-modal-edit-btn" data-bs-dismiss="editModal{{ $gallery_image->id }}">Πίσω</button>
