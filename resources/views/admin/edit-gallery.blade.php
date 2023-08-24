@@ -37,7 +37,7 @@
                             @error('uploadedImage')
                                     <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
-                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button class="btn btn-primary" type="submit">Αναίβασμα</button>
                         </form>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
 
                             <div class="mb-3">
                                 <label for="description" class="form-label">Περιγραφή</label>
-                                <textarea class="form-control" id="text" name="text" name="editDescription" value="{{ $gallery_image->text }}"></textarea>
+                                <textarea class="form-control" id="text" name="editDescription" value="{{ $gallery_image->text }}"></textarea>
                             </div>
                             @error('editUploadedImage')
                                     <div class="alert alert-danger">{{ $message }}</div>
