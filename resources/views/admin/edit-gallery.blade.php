@@ -96,7 +96,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" style="width: 40px; height: 40px; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/pencil-fill.svg') }}" alt="edit-icon"> </button>
+                                            <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2 edit-btn" data-modal-edit="editModal{{ $gallery_image->id }}" style="width: 40px; height: 40px; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/pencil-fill.svg') }}" alt="edit-icon"> </button>
                                             <button type="button" class="btn btn-outline-danger btn-circle btn-lg btn-circle ml-2 open-modl"  data-modal="modal{{ $gallery_image->id }}" style="width: 40px; height: 40px; margin-left: .5rem; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/trash3-fill.svg') }}" alt="edit-icon"> </button>
                                         </td>
                                         <td>
@@ -109,6 +109,7 @@
             </div>
         </div>
 
+        <!-- Delete buttons modal -->
 
         @foreach ($gallery_images as $gallery_image)
             <div class="modal" tabindex="-1" id="modal{{ $gallery_image->id }}">
@@ -134,8 +135,44 @@
             </div>
         @endforeach
 
+        <!-- Edit buttons modal -->
 
-        <!-- Mini image modal -->
+        @foreach ($gallery_images as $gallery_image)
+        <div class="modal-cnt modal" tabindex="-1" id="editModal{{ $gallery_image->id }}">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Επεξεργασία εικόνας</h5>
+                        <button type="button" class="btn-close btn-close-edit" data-bs-dismiss="editModal{{ $gallery_image->id }}" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="{{ route('admin.edit-gallery.update', ['id' => $gallery_image->id]) }}" enctype="multipart/form-data">
+                            @csrf
+                            @method('POST')
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Τίτλος</label>
+                                <input type="text" class="form-control" id="title" name="title" value="{{ $gallery_image->title }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Περιγραφή</label>
+                                <textarea class="form-control" id="text" name="text" value="{{ $gallery_image->text }}"></textarea>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary close-modal-btn close-modal-edit-btn" data-bs-dismiss="editModal{{ $gallery_image->id }}">Πίσω</button>
+                                <button type="submit" class="btn btn-success">Αποθήκευση</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @endforeach
+
+
+        <!-- Modal that opean image larger in a -->
         <div class="modal-cnt" id="imageModal">
             <div class="modal-content">
                 <span class="close" style="font-size: 45px; color: black; font-weight: lighter;">&times;</span>
@@ -152,22 +189,3 @@
 <script src="{{ asset('js/admin-dashboard.js') }}"></script>
 <script src="{{ asset('js/edit-gallery.js') }}"></script>
 @endsection
-
-<script>
-// $(document).ready(function() {
-//     $('.close-modal-btn').on('click', function() {
-//         var galleryId = $(this).data('gallery-id');
-//         // Send an AJAX request to delete the row
-//         $.ajax({
-//             url: '/admin/delete-gallery/' + galleryId,
-//             type: 'DELETE',
-//             success: function(response) {
-//                 // Handle success response if needed
-//             },
-//             error: function (xhr) {
-//                 // Handle error response if needed
-//             }
-//         });
-//     });
-// });
-</script>

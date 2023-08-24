@@ -84,4 +84,11 @@ class AdminEditGallery extends Controller
         return redirect()->route('admin.edit-gallery'); // Redirect back to the edit gallery page
     }
     
+    public function update(Request $request, $id) {
+        var_dump($request);exit;
+        $gallery_image = GalleryModel::findOrFail($id);
+        $gallery_image->update([
+            
+        ]);
+    }
 }
