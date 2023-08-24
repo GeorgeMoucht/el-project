@@ -6,29 +6,27 @@ use Closure;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Rules\UniqueImageName;
+use App\Models\GalleryModel;
+
 
 class AdminUploadGalleryRequest extends FormRequest
 {
- 
-    /**
-     * Determine if the validation rule passes.
-     *
-     * @param  string  $attribute
-     * @param  mixed  $value
-     * @return bool
-     */
-    public function passes($attribute, $value)
+
+    public function rules()
     {
-        return GalleryModel::where('image_name', $value)->count() === 0;
+        return [
+            'uploadedImage' => 'required',
+            'title' => 'required|string',
+            'description' => 'required|string',
+        ];
     }
 
-    /**
-     * Get the validation error message.
-     *
-     * @return string
-     */
-    public function message()
+    public function messages()
     {
-        return 'The image name already exists in the database.';
+        return [
+            'uploadedImage.required' => 'Το πεδίο είναι υποχρεωτικό.',
+            'title.required' => 'Το πεδίο είναι υποχρεωτικό.',
+            'description.required' => 'Επιλέξτε εικόνα για αναίβασμα.'
+        ];
     }
 }
