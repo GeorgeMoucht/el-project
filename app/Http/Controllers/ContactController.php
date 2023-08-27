@@ -23,4 +23,11 @@ class ContactController extends Controller
     {
         return view('contact');
     }
+
+    // Form submission
+    public function submitForm(Request $request)
+    {
+        echo "test";
+        exit;
+    }
 }
