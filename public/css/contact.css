@@ -1,0 +1,36 @@
+.contact-info-cnt {
+    /* height: auto; */
+    width: 100%;
+    background: yellow;
+}
+
+.circle-cnt {
+    background: rgba(176, 176, 176, 0.3);
+    border: 2px solid rgba(176, 176, 176, 0.521);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+
+.contact-info-cnt ul li {
+    border: none;
+}
+
+.contact-border {
+    border: 2px solid rgba(200, 200, 200, 0.665);
+    -webkit-border-radius: 12px;
+    -webkit-border-top-right-radius: 100px;
+    -webkit-border-bottom-left-radius: 100px;
+    -moz-border-radius: 20px;
+    -moz-border-radius-topright: 100px;
+    -moz-border-radius-bottomleft: 100px;
+    border-radius: 20px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-color: rgba(200, 200, 200, 0.233);
+}
