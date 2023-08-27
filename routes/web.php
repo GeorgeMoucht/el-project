@@ -46,6 +46,8 @@ Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.
 Route::get('/gallery', [GalleryController::class, 'render'])->name('gallery');
 // Route::post('galllery/add-gallery-image', [])
 Route::get('/contact', [ContactController::class, 'render'])->name('contact');
+// Contact post page
+Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 
 Route::middleware(['admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminDashboard::class, 'dashboard'])->name('admin.dashboard');
