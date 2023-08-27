@@ -64,11 +64,8 @@
             <!-- Right col -->
             <div class="col-md-6 p-5" style="">
                 <h2>Επικοινωνία</h2>
-                <form>
-                    <!-- <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Εισάγεται το email σας.">
-                    </div> -->
+                <form method="post" action="{{ route('contact.submit') }}" enctype="multipart/form-data">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6 mb-2">
                             <label for="input1" class="form-label">Email</label>
