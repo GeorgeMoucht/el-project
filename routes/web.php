@@ -10,6 +10,7 @@ use App\Http\Controllers\AdminDashboard;
 use App\Http\Controllers\AdminUsers;
 use App\Http\Controllers\AdminEditGallery;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ContactController;
 
 use App\Http\Middleware\AdminMiddleware;
 
@@ -44,6 +45,9 @@ Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.
 
 Route::get('/gallery', [GalleryController::class, 'render'])->name('gallery');
 // Route::post('galllery/add-gallery-image', [])
+Route::get('/contact', [ContactController::class, 'render'])->name('contact');
+// Contact post page
+Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 
 Route::middleware(['admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminDashboard::class, 'dashboard'])->name('admin.dashboard');
