@@ -38,6 +38,10 @@
                         <li class="nav-item">
                             <a href="{{ route('gallery') }}" class="nav-link">Αρχειακό υλικό</a>                         
                         </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('contact') }}" class="nav-link">Επικοινωνία</a>                         
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
