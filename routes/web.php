@@ -52,6 +52,7 @@ Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact
 Route::middleware(['admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminDashboard::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/admin/users', [AdminUsers::class, 'render'])->name('admin.users');
+    Route::delete('/admin/users/delete/{id}', [AdminUsers::class, 'deleteUser'])->name('admin.users.delete');
     Route::get('/admin/edit-gallery', [AdminEditGallery::class, 'render'])->name('admin.edit-gallery');
     Route::post('/admin/edit-gallery/upload', [AdminEditGallery::class, 'uploadImage'])->name('admin.edit-gallery.upload');
     Route::delete('/admin/edit-gallery/delete/{id}', [AdminEditGallery::class, 'delete'])->name('admin.edit-gallery.delete');
