@@ -42,7 +42,7 @@
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2 edit-btn" data-modal-edit="editModal{{ $user->id }}" style="width: 40px; height: 40px; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/pencil-fill.svg') }}" alt="edit-icon"> </button>
-                                        <button type="button" class="btn btn-outline-danger btn-circle btn-lg btn-circle ml-2 open-modl"  data-modal="modal{{ $user->id }}" style="width: 40px; height: 40px; margin-left: .5rem; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/trash3-fill.svg') }}" alt="edit-icon"> </button>
+                                        <button type="button" class="btn btn-outline-danger btn-circle btn-lg btn-circle ml-2 open-modl"  data-modal="modal{{ $user->id }}" style="width: 40px; height: 40px; margin-left: .5rem; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/trash3-fill.svg') }}" alt="delete-icon"> </button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -51,6 +51,34 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- Delete buttons modal -->
+
+        @foreach ($users as $user)
+            <div class="modal" tabindex="-1" id="modal{{ $user->id }}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Διαγραφή Χρήστη</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal{{ $user->id }}" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Είστε σίγουρος πως θέλετε να διαγράψετε οριστικά την εικόνα με όνομα <b style="text-decoration: underline;">{{ $user->name }}</b> </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary close-modal-btn" data-bs-dismiss="modal{{ $user->id }}">Πίσω</button>
+                            <form method="post" action="{{ route('admin.edit-gallery.delete', ['id' => $user->id]) }}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Διαγραφή</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+
 
         <!-- <div class="row">
             <div class="col-md-12">
@@ -116,4 +144,5 @@
 
 @section('pagespecificscripts')
 <script src="{{ asset('js/admin-dashboard.js') }}"></script>
+<script src="{{ asset('js/edit-users-dashboard.js') }}"></script>
 @endsection
