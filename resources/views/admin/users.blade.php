@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('pagespecificstyles')
 <link href="{{ asset('css/admin-dashboard.css') }}" rel="stylesheet">
+<link href="{{ asset('css/edit-users-dashboard.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -26,7 +27,19 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title text-uppercase mb-0">Διαχείρηση Χρηστών</h5>
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="card-title text-uppercase mb-0">Διαχείρηση Χρηστών</h5>
+                        </div>
+                        <div class="insert-btn-cnt col">
+                            <button>
+                                <span>
+                                    <img style="margin-bottom: 0px;" src="{{ asset('img/svg/plus-lg.svg') }}" alt="plus-icon">
+                                </span>
+                                Εισαγωγή νέος χρήστη
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="table-responsive table-container">
                     <table class="table no-wrap user-table mb-0">
@@ -44,19 +57,19 @@
                                 <!-- Change the color of the row if the user is admin -->
                                 @if($user->admin == 1)
                                     <tr class="gallery-it">
-                                        <td class="pl-4" style="background-color: rgba(252, 249, 55, 0.503)">
+                                        <td class="pl-4" style="background-color: rgba(252, 249, 55, 0.403)">
                                             <span class="text-muted" style="font-size: 14px;">{{ $user->id }}</span>
                                         </td>
-                                        <td  style="background-color: rgba(252, 249, 55, 0.503)">
+                                        <td  style="background-color: rgba(252, 249, 55, 0.403)">
                                             <span class="text-muted" style="font-size: 14px;">{{ $user->name }}</span>
                                         </td>
-                                        <td  style="background-color: rgba(252, 249, 55, 0.503)">
+                                        <td  style="background-color: rgba(252, 249, 55, 0.403)">
                                             <span class="text-muted" style="font-size: 14px;">{{ $user->email }}</span>
                                         </td>
-                                        <td  style="background-color: rgba(252, 249, 55, 0.503)">
+                                        <td  style="background-color: rgba(252, 249, 55, 0.403)">
                                             <span class="text-muted" style="font-size: 14px;">••••••••••••••••</span>
                                         </td>
-                                        <td  style="background-color: rgba(252, 249, 55, 0.503)">
+                                        <td  style="background-color: rgba(252, 249, 55, 0.403)">
                                             <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2 edit-btn" data-modal-edit="editModal{{ $user->id }}" style="width: 40px; height: 40px; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/pencil-fill.svg') }}" alt="edit-icon"> </button>
                                         </td>
                                     </tr>

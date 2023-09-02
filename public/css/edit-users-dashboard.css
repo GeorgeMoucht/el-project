@@ -1,0 +1,22 @@
+.insert-btn-cnt {
+    position: relative;
+}
+
+.insert-btn-cnt button {
+    font-size: 17px;
+    position: absolute;
+    right: 20px;
+    background-color: rgb(1, 214, 1);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+
+}
+
+.insert-btn-cnt img {
+    width: 25px;
+}
