@@ -24,7 +24,7 @@
 
     <div class="row mt-4">
         <div class="col-md-12">
-            <div class="card"  style="height: 400px;">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title text-uppercase mb-0">Διαχείρηση Χρηστών</h5>
                 </div>
@@ -41,24 +41,45 @@
                         </thead>
                         <tbody>
                             @foreach ($users as $user)
-                                <tr class="gallery-it">
-                                    <td class="pl-4">
-                                        <span class="text-muted" style="font-size: 14px;">{{ $user->id }}</span>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted" style="font-size: 14px;">{{ $user->name }}</span>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted" style="font-size: 14px;">{{ $user->email }}</span>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted" style="font-size: 14px;">••••••••••••••••</span>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2 edit-btn" data-modal-edit="editModal{{ $user->id }}" style="width: 40px; height: 40px; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/pencil-fill.svg') }}" alt="edit-icon"> </button>
-                                        <button type="button" class="btn btn-outline-danger btn-circle btn-lg btn-circle ml-2 open-modl"  data-modal="modal{{ $user->id }}" style="width: 40px; height: 40px; margin-left: .5rem; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/trash3-fill.svg') }}" alt="delete-icon"> </button>
-                                    </td>
-                                </tr>
+                                <!-- Change the color of the row if the user is admin -->
+                                @if($user->admin == 1)
+                                    <tr class="gallery-it">
+                                        <td class="pl-4" style="background-color: rgba(252, 249, 55, 0.503)">
+                                            <span class="text-muted" style="font-size: 14px;">{{ $user->id }}</span>
+                                        </td>
+                                        <td  style="background-color: rgba(252, 249, 55, 0.503)">
+                                            <span class="text-muted" style="font-size: 14px;">{{ $user->name }}</span>
+                                        </td>
+                                        <td  style="background-color: rgba(252, 249, 55, 0.503)">
+                                            <span class="text-muted" style="font-size: 14px;">{{ $user->email }}</span>
+                                        </td>
+                                        <td  style="background-color: rgba(252, 249, 55, 0.503)">
+                                            <span class="text-muted" style="font-size: 14px;">••••••••••••••••</span>
+                                        </td>
+                                        <td  style="background-color: rgba(252, 249, 55, 0.503)">
+                                            <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2 edit-btn" data-modal-edit="editModal{{ $user->id }}" style="width: 40px; height: 40px; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/pencil-fill.svg') }}" alt="edit-icon"> </button>
+                                        </td>
+                                    </tr>
+                                @else
+                                    <tr class="gallery-it">
+                                        <td class="pl-4">
+                                            <span class="text-muted" style="font-size: 14px;">{{ $user->id }}</span>
+                                        </td>
+                                        <td>
+                                            <span class="text-muted" style="font-size: 14px;">{{ $user->name }}</span>
+                                        </td>
+                                        <td>
+                                            <span class="text-muted" style="font-size: 14px;">{{ $user->email }}</span>
+                                        </td>
+                                        <td>
+                                            <span class="text-muted" style="font-size: 14px;">••••••••••••••••</span>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2 edit-btn" data-modal-edit="editModal{{ $user->id }}" style="width: 40px; height: 40px; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/pencil-fill.svg') }}" alt="edit-icon"> </button>
+                                            <button type="button" class="btn btn-outline-danger btn-circle btn-lg btn-circle ml-2 open-modl"  data-modal="modal{{ $user->id }}" style="width: 40px; height: 40px; margin-left: .5rem; padding: 0px;"><img style="margin-bottom: 0px;" src="{{ asset('img/svg/trash3-fill.svg') }}" alt="delete-icon"> </button>
+                                        </td>
+                                    </tr>
+                                @endif  
                             @endforeach
                         </tbody>
                     </table>
