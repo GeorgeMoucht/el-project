@@ -25,14 +25,14 @@
 
     <div class="row mt-4">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card" style="max-height: 400px;">
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
                             <h5 class="card-title text-uppercase mb-0">Διαχείρηση Χρηστών</h5>
                         </div>
                         <div class="insert-btn-cnt col">
-                            <button>
+                            <button id="insertUserBtn" data-modal="newUserModal">
                                 <span>
                                     <img style="margin-bottom: 0px;" src="{{ asset('img/svg/plus-lg.svg') }}" alt="plus-icon">
                                 </span>
@@ -100,6 +100,24 @@
             </div>
         </div>
 
+        <!-- Insert new user modal -->
+        <div class="modal" tabindex="-1" id="newUserModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Εισαγωγή νέου χρήστη</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="closeInsertUserModal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, dolorum libero ad non voluptate officia placeat! Unde, quidem amet. Veritatis eum quibusdam molestiae expedita nemo est saepe beatae quos quisquam.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-modal-btn" data-bs-dismiss="closeInsertUserModalDown">Πίσω</button>
+                        <p>asasdfasdf</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Delete buttons modal -->
 

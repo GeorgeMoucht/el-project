@@ -32,4 +32,33 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Insert new user modal functionality.
+
+    const insertUserBtn = document.getElementById("insertUserBtn");
+
+    insertUserBtn.addEventListener('click', () => {
+        const modalId = insertUserBtn.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+
+        if (modal) {
+            modal.style.display = 'block';
+
+            const closeButton = modal.querySelector('.btn-close');
+            closeButton.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            const closeButtonDown = modal.querySelector('.close-modal-btn');
+            closeButtonDown.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', event => {
+                if(event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+    });
 });
