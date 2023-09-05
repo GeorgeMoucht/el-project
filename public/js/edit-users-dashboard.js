@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     insertUserBtn.addEventListener('click', () => {
         const modalId = insertUserBtn.getAttribute('data-modal');
         const modal = document.getElementById(modalId);
+        const modalForm = document.getElementById('isertUserForm');
 
         if (modal) {
             modal.style.display = 'block';
@@ -47,16 +48,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const closeButton = modal.querySelector('.btn-close');
             closeButton.addEventListener('click', () => {
                 modal.style.display = 'none';
+                modalForm.reset();
             });
 
             const closeButtonDown = modal.querySelector('.close-modal-btn');
             closeButtonDown.addEventListener('click', () => {
                 modal.style.display = 'none';
+                modalForm.reset();
             });
 
             modal.addEventListener('click', event => {
                 if(event.target === modal) {
                     modal.style.display = 'none';
+                    modalForm.reset();
                 }
             });
         }

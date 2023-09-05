@@ -45,4 +45,9 @@ class AdminUsers extends Controller
         
         return redirect()->route('admin.users'); // Redirect back tou admin edit user page.
     }
+
+    public function insertUser()
+    {
+        
+    }
 }

@@ -109,12 +109,38 @@
                         <button type="button" class="btn-close" data-bs-dismiss="closeInsertUserModal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, dolorum libero ad non voluptate officia placeat! Unde, quidem amet. Veritatis eum quibusdam molestiae expedita nemo est saepe beatae quos quisquam.</p>
+                        <form method="post" action="{{ route('admin.users.insert') }}"  enctype="multipart/form-data" id="isertUserForm">
+                            <div class="input-group flex-nowrap mb-3">
+                                <input type="text" name="name" class="form-control" placeholder="Όνομα Χρήστη" aria-label="Name" aria-describedby="addon-wrapping">
+                            </div>
+                            @error('name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            <div class="input-group flex-nowrap mb-3">
+                                <input type="text" name="email" class="form-control" placeholder="Ηλεκτρονική διεύθυνση" aria-label="Email" aria-describedby="addon-wrapping">
+                            </div>
+                            @error('email')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            <div class="input-group flex-nowrap mb-3">
+                                <input type="password" name="password" class="form-control" placeholder="Κωδικός πρόσβασης" aria-label="Password" aria-describedby="addon-wrapping">
+                                <div class="show-password">
+                                    <img src="{{ asset('img/svg/eye-fill.svg') }}" alt="">
+                                </div>
+                                <div class="generate-password">
+                                    <img src="{{ asset('img/svg/arrow-counterclockwise.svg') }}" alt="">
+                                </div>
+                            </div>
+                            @error('password')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary close-modal-btn" data-bs-dismiss="closeInsertUserModalDown">Πίσω</button>
-                        <p>asasdfasdf</p>
-                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary close-modal-btn" data-bs-dismiss="closeInsertUserModalDown">Πίσω</button>
+                            <button class="btn btn-primary" type="submit">Αναίβασμα</button>
+                        </form>
+                </div>
+
                 </div>
             </div>
         </div>
