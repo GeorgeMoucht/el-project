@@ -65,4 +65,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+
+    // Make password field as type=text if user click the button.
+    const passwordInput = document.getElementById("passwordField");
+    const togglePasswordBtn = document.getElementById("passwordFieldToggle");
+    const showPasswordSvg = document.getElementById('passwordSvg');
+
+    togglePasswordBtn.addEventListener("click", function () {
+
+        if(passwordInput.type === "password") {
+            passwordInput.type = "text";
+            showPasswordSvg.src = assetBaseUrl + "img/svg/eye-slash-fill.svg";
+        } else {
+            passwordInput.type = "password";
+            showPasswordSvg.src = assetBaseUrl + "img/svg/eye-fill.svg";
+        }
+    });
 });

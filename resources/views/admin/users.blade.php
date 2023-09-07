@@ -1,3 +1,6 @@
+<script>
+var assetBaseUrl = "{{ asset('') }}";   // Init the path of images so we can use it in our js files.
+</script>
 @extends('layouts.admin')
 @section('pagespecificstyles')
 <link href="{{ asset('css/admin-dashboard.css') }}" rel="stylesheet">
@@ -123,9 +126,9 @@
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                             <div class="input-group flex-nowrap mb-3">
-                                <input type="password" name="password" class="form-control" placeholder="Κωδικός πρόσβασης" aria-label="Password" aria-describedby="addon-wrapping">
-                                <div class="show-password">
-                                    <img src="{{ asset('img/svg/eye-fill.svg') }}" alt="">
+                                <input type="password" id="passwordField" name="password" class="form-control" placeholder="Κωδικός πρόσβασης" aria-label="Password" aria-describedby="addon-wrapping">
+                                <div class="show-password" id="passwordFieldToggle">
+                                    <img src="{{ asset('img/svg/eye-fill.svg') }}" alt="" id="passwordSvg">
                                 </div>
                                 <div class="generate-password">
                                     <img src="{{ asset('img/svg/arrow-counterclockwise.svg') }}" alt="">
