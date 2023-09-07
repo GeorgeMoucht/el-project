@@ -130,7 +130,7 @@ var assetBaseUrl = "{{ asset('') }}";   // Init the path of images so we can use
                                 <div class="show-password" id="passwordFieldToggle">
                                     <img src="{{ asset('img/svg/eye-fill.svg') }}" alt="" id="passwordSvg">
                                 </div>
-                                <div class="generate-password">
+                                <div class="generate-password" id="generatePasswordBtn">
                                     <img src="{{ asset('img/svg/arrow-counterclockwise.svg') }}" alt="">
                                 </div>
                             </div>

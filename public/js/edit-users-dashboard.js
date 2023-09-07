@@ -82,4 +82,27 @@ document.addEventListener('DOMContentLoaded', function() {
             showPasswordSvg.src = assetBaseUrl + "img/svg/eye-fill.svg";
         }
     });
+
+
+    // Generate password event listener
+    const generatePasswordBtn = document.getElementById("generatePasswordBtn");
+    
+    generatePasswordBtn.addEventListener("click", function () {
+        const generatedPassword = generateRandomPassword(8);
+        passwordInput.value = generatedPassword;
+    });
 });
+
+// By giving the length of the password we want. 
+// This function will generate passwords for the users.
+function generateRandomPassword(length) {
+    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let password = "";
+    
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * charset.length);
+        password += charset.charAt(randomIndex);
+    }
+    
+    return password.substring(0, length); // Limit the password to the desired length
+}
