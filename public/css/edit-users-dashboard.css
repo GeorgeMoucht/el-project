@@ -1,0 +1,47 @@
+.insert-btn-cnt {
+    position: relative;
+}
+
+.insert-btn-cnt button {
+    font-size: 17px;
+    position: absolute;
+    right: 20px;
+    background-color: rgb(1, 214, 1);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+
+}
+
+.insert-btn-cnt img {
+    width: 25px;
+}
+
+
+.show-password , 
+.generate-password {
+    width: 40px;
+    position: relative;
+    border: 1px solid #DEE2E6;
+    border-radius: 12px;
+}
+
+.show-password:hover,
+.generate-password:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.030)
+}
+
+.show-password img ,
+.generate-password img {
+    padding: 0px;
+    width: 20px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
