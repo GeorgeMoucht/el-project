@@ -113,6 +113,7 @@ var assetBaseUrl = "{{ asset('') }}";   // Init the path of images so we can use
                     </div>
                     <div class="modal-body">
                         <form method="post" action="{{ route('admin.users.insert') }}"  enctype="multipart/form-data" id="isertUserForm">
+                           @csrf
                             <div class="input-group flex-nowrap mb-3">
                                 <input type="text" name="name" class="form-control" placeholder="Όνομα Χρήστη" aria-label="Name" aria-describedby="addon-wrapping">
                             </div>
@@ -137,11 +138,12 @@ var assetBaseUrl = "{{ asset('') }}";   // Init the path of images so we can use
                             @error('password')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
-                    </div>
-                        <div class="modal-footer">
+                            <div class="modal-footer">
                             <button type="button" class="btn btn-secondary close-modal-btn" data-bs-dismiss="closeInsertUserModalDown">Πίσω</button>
                             <button class="btn btn-primary" type="submit">Αναίβασμα</button>
-                        </form>
+                        </form> 
+                    </div>
+                   
                 </div>
 
                 </div>

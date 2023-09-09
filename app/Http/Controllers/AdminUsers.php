@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UserModel;
+use Illuminate\Support\Facades\Hash;
 
 class AdminUsers extends Controller
 {
@@ -46,8 +47,26 @@ class AdminUsers extends Controller
         return redirect()->route('admin.users'); // Redirect back tou admin edit user page.
     }
 
-    public function insertUser()
+    public function insertUser(Request $request)
     {
-        
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $hashedPassword = Hash::make($password);
+
+        try {
+            $user = new UserModel;
+            $user->name = $name;
+            $user->email = $email;
+            $user->password = $hashedPassword;
+    
+            $user->save();
+            session()->flash('flashMessage', 'Ο χρήστης δημιουργήθηκε επιτυχώς.');
+                
+        } catch (\Exception $e) {
+            session()->flash('flashMessageDanger', 'Κάτι πήγε στραβά... Παρακαλώ προσπαθήστε πάλι.');
+        }
+
+        return redirect()->route('admin.users');
     }
 }
