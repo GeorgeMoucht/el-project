@@ -39,6 +39,11 @@
                             <a href="{{ route('gallery') }}" class="nav-link">Αρχειακό υλικό</a>                         
                         </li>
 
+                        <!-- Mp3 files -->
+                        <li class="nav-item">
+                            <a href="{{ route('mp3') }}" class="nav-link">Αρχείο ήχου</a>
+                        </li>
+
                         <li class="nav-item">
                             <a href="{{ route('contact') }}" class="nav-link">Επικοινωνία</a>                         
                         </li>
@@ -50,13 +55,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Σύνδεση') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Εγγραφή') }}</a>
                                 </li>
                             @endif
                         @else
@@ -76,7 +81,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Αποσύνδεση') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

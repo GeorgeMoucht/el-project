@@ -11,6 +11,7 @@ use App\Http\Controllers\AdminUsers;
 use App\Http\Controllers\AdminEditGallery;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Mp3Controller;
 
 use App\Http\Middleware\AdminMiddleware;
 
@@ -38,6 +39,8 @@ Route::get('/elpida-bio', [BioElpidaController::class, 'render'])->name('elpida-
 Route::get('/vasilis-bio', [BioVasilisController::class, 'render'])->name('vasilis-bio');
 
 Route::get('/music-files', [MusicFilesController::class, 'render'])->name('music-files');
+
+Route::get('/mp3', [Mp3Controller::class, 'render'])->name('mp3');
 
 // Admin login routes
 Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
