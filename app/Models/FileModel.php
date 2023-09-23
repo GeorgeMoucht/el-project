@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class GalleryModel extends Model
+{
+    use HasFactory;
+
+    protected $table = 'files'; // Specify the correct table name in Database.
+
+    protected $primaryKey = 'fileId';
+
+    protected $fillable = [
+        'fileName',
+        'pathToFile',
+        'categoryId',
+    ];
+
+}
