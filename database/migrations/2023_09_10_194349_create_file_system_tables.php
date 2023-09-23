@@ -11,20 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Files table
-        Schema::create('files', function (Blueprint $table) {
-            $table->id('fileId');
-            $table->string('fileName');
-            $table->string('pathToFile');
-            $table->string('categoryId');
-            $table->timestamps();
-        });
+
 
         // Categories table
         Schema::create('categories', function (Blueprint $table) {
             $table->id('categoryId');
             $table->string('categoryName');
         });
+
 
         // subCategories table
         Schema::create('subCategories', function (Blueprint $table) {
@@ -39,6 +33,17 @@ return new class extends Migration
             $table->foreign('categoryId')->references('categoryId')->on('categories');
             $table->foreign('subCategoryId')->references('subCategoryId')->on('subCategories');
         });
+
+        // Files table
+        Schema::create('files', function (Blueprint $table) {
+            $table->id('fileId');
+            $table->string('fileName');
+            $table->string('pathToFile');
+            $table->unsignedBigInteger('categoryId');
+            $table->timestamps();
+
+            $table->foreign('categoryId')->references('categoryId')->on('categories');
+        });
     }
 
     /**
@@ -48,10 +53,11 @@ return new class extends Migration
     {
         Schema::dropIfExists('files');
 
+        Schema::dropIfExists('category_has_sub');
+
         Schema::dropIfExists('categories');
 
         Schema::dropIfExists('subCategories');
 
-        Schema::dropIfExists('category_has_sub');
     }
 };
