@@ -11,6 +11,8 @@ class CategoryHasSub extends Model
 
     protected $table = 'category_has_sub'; // Specify the correct table name in Database.
 
+    public $timestamps = false;
+
     protected $fillable = [
         'categoryId',
         'subCategoryId',
