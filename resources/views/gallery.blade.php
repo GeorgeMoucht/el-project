@@ -1,5 +1,7 @@
 @extends('layouts.app')
-<link href="{{ asset('css/gallery.css') }}" rel="stylesheet">
+@section('pagespecificstyles')
+  <link href="{{ asset('css/gallery.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 
 <div class="container" style="margin-bottom: 2rem;">

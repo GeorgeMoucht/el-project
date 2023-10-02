@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('pagespecificstyles')
+    <link href="{{ asset('css/bios.css') }}" rel="stylesheet">
+@endsection
 
 @section('content')
 <!-- <h1>Elpidas bio</h1> -->

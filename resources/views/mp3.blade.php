@@ -1,5 +1,7 @@
 @extends('layouts.app')
-<link href="{{ asset('css/mp3.css') }}" rel="stylesheet">
+@section('pagespecificstyles')
+    <link href="{{ asset('css/mp3.css') }}" rel="stylesheet">
+@endsection
 
 
 @section('content')

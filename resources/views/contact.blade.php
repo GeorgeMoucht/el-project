@@ -1,5 +1,7 @@
 @extends('layouts.app')
-<link href="{{ asset('css/contact.css') }}" rel="stylesheet">
+@section('pagespecificstyles')
+    <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <div class="d-flex justify-content-center align-items-center" style="margin-bottom: 4rem;">
     <div class="container">
