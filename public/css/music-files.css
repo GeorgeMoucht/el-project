@@ -175,3 +175,13 @@ details summary:hover {
     cursor: pointer;
     color: rgba(0, 0, 255, 0.632);
 }
+
+
+.category-link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.701);
+}
+
+.category-link:hover {
+    color: rgba(0, 0, 0, 0.491);
+}
