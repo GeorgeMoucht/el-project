@@ -12,7 +12,7 @@
                 <div>
                     <!-- Website Λύκειο Ελληνίδων -->
                     <a class="btn btn-primary me-2 social-hover-web" style="background-color: #481449; width: 50px;" href="https://www.les.gr" target="__blank" role="button">
-                        <img width="20" src="img/svg/circle-info-solid.svg" alt="website-icon">
+                        <img width="20" src="{{ asset('img/svg/circle-info-solid.svg') }}" alt="website-icon">
                     </a>
                     <!-- Facebook -->
                     <a class="btn btn-primary me-2 social-hover-fa" style="background-color: #3b5998; width: 40px;" href="https://www.facebook.com/profile.php?id=100064362262265&ref=bookmarks" target="__blank" role="button">
@@ -20,7 +20,7 @@
                     </a>
                     <!-- Youtube -->
                     <a class="btn btn-primary me-2 social-hover-yt" style="background-color: #ed302f;" href="https://www.youtube.com/channel/UCMug6a0jl82caMqx3BsXi-Q" target="__blank" role="button">
-                        <img width="20" src="img/svg/youtube.svg" alt="youtube-logo">
+                        <img width="20" src="{{ asset('img/svg/youtube.svg') }}" alt="youtube-logo">
                     </a>
                 </div>
                 <!-- Right -->
@@ -98,17 +98,17 @@
                             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
                             <!-- Address -->
                             <div class="container d-inline-flex" style="padding: 0px;">
-                                <img src="img/svg/house-door-fill.svg" width="20" alt="house-icon">
+                                <img src="{{ asset('img/svg/house-door-fill.svg') }}" width="20" alt="house-icon">
                                 <div style="padding-left: .5rem;">Konstantinoupoleos 33, Sérres</div>                   
                             </div>
                             <!-- Email -->
                             <div class="container d-inline-flex" style="padding: 0px;">
-                                <img src="img/svg/envelope-fill.svg" width="20" alt="email-icon">
+                                <img src="{{ asset('img/svg/envelope-fill.svg') }}" width="20" alt="email-icon">
                                 <div style="padding-left: .5rem;">les@les.gr</div>                   
                             </div>
                             <!-- Phone -->
                             <div class="container d-inline-flex" style="padding: 0px;">
-                                <img src="img/svg/telephone-fill.svg" width="20" alt="phone-icon">
+                                <img src="{{ asset('img/svg/telephone-fill.svg') }}" width="20" alt="phone-icon">
                                 <div style="padding-left: .5rem;">2321 023390</div>                   
                             </div>
                         </div>
@@ -130,6 +130,7 @@
 
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <!-- jQuerry cdn -->
