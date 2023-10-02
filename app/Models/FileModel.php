@@ -17,6 +17,12 @@ class FileModel extends Model
         'fileName',
         'pathToFile',
         'categoryId',
+        'subCategoryId',
     ];
+
+    public function subCategory()
+    {
+        return $this->belongsTo(SubCategoryModel::class, 'subCategoryId');
+    }
 
 }

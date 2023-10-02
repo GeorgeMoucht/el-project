@@ -24,4 +24,9 @@ class SubCategoryModel extends Model
     {
         return $this->hasMany(CategoryHasSub::class, 'subCategoryId');
     }
+
+    public function files()
+    {
+        return $this->hasMany(FileModel::class, 'subCategoryId');
+    }
 }
