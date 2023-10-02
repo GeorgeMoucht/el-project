@@ -40,6 +40,8 @@ Route::get('/vasilis-bio', [BioVasilisController::class, 'render'])->name('vasil
 
 Route::get('/music-files', [MusicFilesController::class, 'render'])->name('music-files');
 
+Route::get('/music-files/{category_name}', [MusicFilesController::class, 'renderCategory'])->name('renderCategory');
+
 Route::get('/mp3', [Mp3Controller::class, 'render'])->name('mp3');
 
 // Admin login routes
