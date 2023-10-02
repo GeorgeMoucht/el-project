@@ -13,80 +13,80 @@ class CategoryHasSubSeeder extends Seeder
      */
     public function run(): void
     {
-        //categoryId range [1,9] , subCategoryId range [27,39]
+        //categoryId range [1,9] , subCategoryId range [27,39] 1-13
         CategoryHasSub::create([
             'categoryId' => '1',
-            'subCategoryId' => '27',
+            'subCategoryId' => '1',
         ]);
 
         CategoryHasSub::create([
             'categoryId' => '1',
-            'subCategoryId' => '28',
+            'subCategoryId' => '2',
         ]);
 
         
         CategoryHasSub::create([
             'categoryId' => '1',
-            'subCategoryId' => '29',
+            'subCategoryId' => '3',
         ]);
 
         CategoryHasSub::create([
             'categoryId' => '2',
-            'subCategoryId' => '30',
+            'subCategoryId' => '4',
         ]);
 
         CategoryHasSub::create([
             'categoryId' => '2',
-            'subCategoryId' => '31',
+            'subCategoryId' => '5',
         ]);
 
         
         CategoryHasSub::create([
             'categoryId' => '3',
-            'subCategoryId' => '32',
+            'subCategoryId' => '6',
         ]);
 
 
         CategoryHasSub::create([
             'categoryId' => '3',
-            'subCategoryId' => '33',
+            'subCategoryId' => '7',
         ]);
 
         CategoryHasSub::create([
             'categoryId' => '3',
-            'subCategoryId' => '34',
+            'subCategoryId' => '8',
         ]);
 
 
         CategoryHasSub::create([
             'categoryId' => '3',
-            'subCategoryId' => '35',
+            'subCategoryId' => '9',
         ]);
 
 
         CategoryHasSub::create([
             'categoryId' => '4',
-            'subCategoryId' => '36',
+            'subCategoryId' => '10',
         ]);
 
 
 
         CategoryHasSub::create([
             'categoryId' => '5',
-            'subCategoryId' => '37',
+            'subCategoryId' => '11',
         ]);
         
 
 
         CategoryHasSub::create([
             'categoryId' => '6',
-            'subCategoryId' => '38',
+            'subCategoryId' => '12',
         ]);
 
 
         CategoryHasSub::create([
             'categoryId' => '8',
-            'subCategoryId' => '39',
+            'subCategoryId' => '13',
         ]);
     }
 }
